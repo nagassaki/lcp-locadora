@@ -91,18 +91,17 @@ public class DadosDemo {
         
         Categoria economico = new Categoria("Econômico", new BigDecimal(20), new BigDecimal(10));
         Categoria economicoPremium = new Categoria("Econômico Premium", new BigDecimal(30), new BigDecimal(15));
-        Categoria intermediario = new Categoria("Intermediário", new BigDecimal(50), new BigDecimal(25));
-        Categoria intermediarioPremium = new Categoria("Intermediário Premium", new BigDecimal(80), new BigDecimal(40));
+        Categoria intermediario = new Categoria("Intermediário", new BigDecimal(40), new BigDecimal(20));
+        Categoria intermediarioPremium = new Categoria("Intermediário Premium", new BigDecimal(50), new BigDecimal(25));
         Categoria executivo = new Categoria("Executivo", new BigDecimal(200), new BigDecimal(100));
-        Categoria luxo = new Categoria("Luxo", new BigDecimal(500), new BigDecimal(350));
-        Categoria suv = new Categoria("SUV", new BigDecimal(100), new BigDecimal(100));
+        Categoria luxo = new Categoria("Luxo", new BigDecimal(500), new BigDecimal(250));
+        Categoria suv = new Categoria("SUV", new BigDecimal(100), new BigDecimal(50));
         Categoria suvPremium = new Categoria("SUV Premium", new BigDecimal(300), new BigDecimal(150));
         Categoria van = new Categoria("Van", new BigDecimal(50), new BigDecimal(25));
-        Categoria vanPremium = new Categoria("Van Premium", new BigDecimal(100), new BigDecimal(50));
+        Categoria vanPremium = new Categoria("Van Premium", new BigDecimal(80), new BigDecimal(40));
         Categoria pickup = new Categoria("Pick-Up", new BigDecimal(50), new BigDecimal(25));
         Categoria pickupPremium = new Categoria("Pick-Up Premium", new BigDecimal(300), new BigDecimal(150));
-
-        categoriaService.save(vanPremium);
+        
         categoriaService.save(economico);
         categoriaService.save(economicoPremium);
         categoriaService.save(intermediario);
@@ -126,6 +125,7 @@ public class DadosDemo {
         Caracteristica tresPessoas = new Caracteristica("3 Pessoas");
         Caracteristica cincoPessoas = new Caracteristica("5 Pessoas");
         Caracteristica setePessoas = new Caracteristica("7 Pessoas");
+        Caracteristica oitoPessoas = new Caracteristica("8 Pessoas");
         Caracteristica direcaoHidraulica = new Caracteristica("Direção Hidráulica");
         Caracteristica direcaoEletrica = new Caracteristica("Direção Elétrica");
         Caracteristica manual = new Caracteristica("Câmbio Manual");
@@ -149,6 +149,7 @@ public class DadosDemo {
         caracteristicaService.save(tresPessoas);
         caracteristicaService.save(cincoPessoas);
         caracteristicaService.save(setePessoas);
+        caracteristicaService.save(oitoPessoas);
         caracteristicaService.save(direcaoHidraulica);
         caracteristicaService.save(direcaoEletrica);
         caracteristicaService.save(manual);
@@ -248,7 +249,7 @@ public class DadosDemo {
         Modelo versa = new Modelo(nissan, executivo, "Versa", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
         Modelo sentra = new Modelo(nissan, executivo, "Sentra", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
         Modelo kicks = new Modelo(nissan, suv, "Kicks", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo frontier = new Modelo(nissan, pickup, "Frontier", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, automatico, direcaoEletrica, abs));
+        Modelo frontier = new Modelo(nissan, pickup, "Frontier", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, automatico, direcaoEletrica, abs, cabineDupla));
 
         modeloService.save(march);
         modeloService.save(versa);
@@ -256,11 +257,11 @@ public class DadosDemo {
         modeloService.save(kicks);
         modeloService.save(frontier);
 
-        Modelo l200 = new Modelo(mitsubishi, pickupPremium, "L200 Triton", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs));
+        Modelo l200 = new Modelo(mitsubishi, pickupPremium, "L200 Triton", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineDupla));
         Modelo asx = new Modelo(mitsubishi, suvPremium, "ASX", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
         Modelo eclipse = new Modelo(mitsubishi, suvPremium, "Eclipse Cross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
         Modelo outlander = new Modelo(mitsubishi, suvPremium, "Outlander", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo pajero = new Modelo(mitsubishi, suvPremium, "Pajero", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo pajero = new Modelo(mitsubishi, suvPremium, "Pajero Full", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
         Modelo lancer = new Modelo(mitsubishi, luxo, "Lancer", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
 
         modeloService.save(l200);
@@ -274,10 +275,10 @@ public class DadosDemo {
         Modelo uno = new Modelo(fiat, economicoPremium, "Uno", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, flex, manual, direcaoHidraulica, abs));
         Modelo argo = new Modelo(fiat, intermediarioPremium, "Argo", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica, abs));
         Modelo cronos = new Modelo(fiat, intermediarioPremium, "Cronos", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo toro = new Modelo(fiat, pickupPremium, "Toro", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo toro = new Modelo(fiat, pickupPremium, "Toro", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs, cabineDupla));
         Modelo siena = new Modelo(fiat, intermediario, "Grand Siena", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, flex, manual, direcaoHidraulica, abs));
         Modelo weekend = new Modelo(fiat, intermediario, "Weekend", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoHidraulica, abs));
-        Modelo strada = new Modelo(fiat, pickup, "Strada", Arrays.asList(duasPortas, duasPessoas, airbag, flex, manual, abs));
+        Modelo strada = new Modelo(fiat, pickup, "Strada", Arrays.asList(duasPortas, duasPessoas, airbag, flex, manual, abs, cabineDupla));
         Modelo doblo = new Modelo(fiat, intermediario, "Doblò", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoHidraulica, abs));
         Modelo fiorino = new Modelo(fiat, van, "Fiorino", Arrays.asList(duasPortas, duasPessoas, flex, manual, abs));
         Modelo ducato = new Modelo(fiat, van, "Ducato", Arrays.asList(duasPortas, tresPessoas, vidro, trava, diesel, manual, direcaoHidraulica, abs));
@@ -296,7 +297,7 @@ public class DadosDemo {
 
         Modelo kwid = new Modelo(renault, suv, "Kwid", Arrays.asList(quatroPortas, cincoPessoas, airbag, flex, manual, abs));
         Modelo captur = new Modelo(renault, suvPremium, "Captur", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, abs));
-        Modelo oroch = new Modelo(renault, pickup, "Duster Oroch", Arrays.asList(quatroPortas, cincoPessoas, flex, manual, direcaoEletrica, abs));
+        Modelo oroch = new Modelo(renault, pickup, "Duster Oroch", Arrays.asList(quatroPortas, cincoPessoas, flex, manual, direcaoEletrica, abs, cabineDupla));
         Modelo duster = new Modelo(renault, suv, "Duster", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, abs));
         Modelo stepway = new Modelo(renault, intermediario, "Stepway", Arrays.asList(quatroPortas, cincoPessoas, airbag, trava, manual, flex, direcaoEletrica, abs));
         Modelo sandero = new Modelo(renault, intermediario, "Sandero", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, trava, manual, flex, direcaoEletrica, abs));
@@ -328,7 +329,7 @@ public class DadosDemo {
         modeloService.save(expert);
         modeloService.save(boxer);
 
-        Modelo c3 = new Modelo(citroen, intermediario, "C3", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
+        Modelo c3 = new Modelo(citroen, intermediarioPremium, "C3", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
         Modelo aircross = new Modelo(citroen, suv, "Aircross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
         Modelo lounge = new Modelo(citroen, executivo, "C4 Lounge", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, direcaoHidraulica, flex));
         Modelo cactus = new Modelo(citroen, suv, "C4 Cactus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, direcaoEletrica, flex));
@@ -342,20 +343,20 @@ public class DadosDemo {
         modeloService.save(jumpy);
         modeloService.save(berlingo);
 
-        Modelo up = new Modelo(volkswagen, economico, "up!", Arrays.asList());
-        Modelo gol = new Modelo(volkswagen, intermediario, "Gol", Arrays.asList());
-        Modelo fox = new Modelo(volkswagen, intermediario, "Fox", Arrays.asList());
-        Modelo polo = new Modelo(volkswagen, intermediario, "Novo Polo", Arrays.asList());
-        Modelo golf = new Modelo(volkswagen, executivo, "Golf", Arrays.asList());
-        Modelo virtus = new Modelo(volkswagen, executivo, "Virtus", Arrays.asList());
-        Modelo voyage = new Modelo(volkswagen, executivo, "Voyage", Arrays.asList());
-        Modelo jetta = new Modelo(volkswagen, executivo, "Jetta", Arrays.asList());
-        Modelo passat = new Modelo(volkswagen, executivo, "Passat", Arrays.asList());
-        Modelo tcross = new Modelo(volkswagen, suv, "T-Cross", Arrays.asList());
-        Modelo tiguan = new Modelo(volkswagen, suv, "Tiguan Allspace", Arrays.asList());
-        Modelo spacefox = new Modelo(volkswagen, intermediario, "SpaceFox", Arrays.asList());
-        Modelo saveiro = new Modelo(volkswagen, pickup, "Saveiro", Arrays.asList());
-        Modelo amorok = new Modelo(volkswagen, pickup, "Amarok", Arrays.asList());
+        Modelo up = new Modelo(volkswagen, economicoPremium, "up!", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo gol = new Modelo(volkswagen, intermediario, "Gol", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo fox = new Modelo(volkswagen, intermediario, "Fox", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo polo = new Modelo(volkswagen, intermediario, "Novo Polo", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo golf = new Modelo(volkswagen, executivo, "Golf", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo virtus = new Modelo(volkswagen, executivo, "Virtus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo voyage = new Modelo(volkswagen, executivo, "Voyage", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo jetta = new Modelo(volkswagen, executivo, "Jetta", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo passat = new Modelo(volkswagen, executivo, "Passat", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo tcross = new Modelo(volkswagen, suvPremium, "T-Cross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo tiguan = new Modelo(volkswagen, suvPremium, "Tiguan Allspace", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo spacefox = new Modelo(volkswagen, intermediario, "SpaceFox", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo saveiro = new Modelo(volkswagen, pickup, "Saveiro", Arrays.asList(duasPortas, cincoPessoas, ar, manual, flex, cabineDupla));
+        Modelo amorok = new Modelo(volkswagen, pickupPremium, "Amarok", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, diesel, abs, cabineDupla));
 
         modeloService.save(up);
         modeloService.save(gol);
@@ -372,16 +373,16 @@ public class DadosDemo {
         modeloService.save(saveiro);
         modeloService.save(amorok);
 
-        Modelo onix = new Modelo(chevrolet, intermediario, "Onix", Arrays.asList());
-        Modelo prisma = new Modelo(chevrolet, intermediario, "Prisma", Arrays.asList());
-        Modelo cobalt = new Modelo(chevrolet, intermediario, "Cobalt", Arrays.asList());
-        Modelo spin = new Modelo(chevrolet, suv, "Spin", Arrays.asList());
-        Modelo cruze = new Modelo(chevrolet, executivo, "Cruze", Arrays.asList());
-        Modelo tracker = new Modelo(chevrolet, suv, "Tracker", Arrays.asList());
-        Modelo equinox = new Modelo(chevrolet, suv, "Equinox", Arrays.asList());
-        Modelo trailblazer = new Modelo(chevrolet, suv, "Trailblazer", Arrays.asList());
-        Modelo montana = new Modelo(chevrolet, pickup, "Montana", Arrays.asList());
-        Modelo s10 = new Modelo(chevrolet, pickup, "S10", Arrays.asList());
+        Modelo onix = new Modelo(chevrolet, intermediarioPremium, "Onix", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo prisma = new Modelo(chevrolet, intermediarioPremium, "Prisma", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoEletrica, abs));
+        Modelo cobalt = new Modelo(chevrolet, intermediarioPremium, "Cobalt", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo spin = new Modelo(chevrolet, suv, "Spin", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo cruze = new Modelo(chevrolet, executivo, "Cruze", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo tracker = new Modelo(chevrolet, suvPremium, "Tracker", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo equinox = new Modelo(chevrolet, suvPremium, "Equinox", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo trailblazer = new Modelo(chevrolet, suvPremium, "Trailblazer", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo montana = new Modelo(chevrolet, pickup, "Montana", Arrays.asList(quatroPortas, duasPessoas, ar, airbag, vidro, trava, manual, flex, direcaoHidraulica, abs, cabineSimples));
+        Modelo s10 = new Modelo(chevrolet, pickupPremium, "S10", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs, cabineDupla));
 
         modeloService.save(onix);
         modeloService.save(prisma);
@@ -394,14 +395,14 @@ public class DadosDemo {
         modeloService.save(montana);
         modeloService.save(s10);
 
-        Modelo ka = new Modelo(ford, economico, "Ka", Arrays.asList());
-        Modelo kaSedan = new Modelo(ford, intermediario, "Ka Sedãn", Arrays.asList());
-        Modelo fiesta = new Modelo(ford, intermediario, "Fiesta", Arrays.asList());
-        Modelo focus = new Modelo(ford, intermediario, "Focus", Arrays.asList());
-        Modelo fusion = new Modelo(ford, executivo, "Fusion", Arrays.asList());
-        Modelo ecosport = new Modelo(ford, suv, "EcoSport", Arrays.asList());
-        Modelo edge = new Modelo(ford, suv, "Novo Edge ST", Arrays.asList());
-        Modelo ranger = new Modelo(ford, pickup, "Ranger", Arrays.asList());
+        Modelo ka = new Modelo(ford, economico, "Ka", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo kaSedan = new Modelo(ford, intermediario, "Ka Sedãn", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo fiesta = new Modelo(ford, intermediario, "New Fiesta", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo focus = new Modelo(ford, intermediarioPremium, "Focus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
+        Modelo fusion = new Modelo(ford, executivo, "Fusion", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo ecosport = new Modelo(ford, suv, "EcoSport", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo edge = new Modelo(ford, suvPremium, "Novo Edge ST", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo ranger = new Modelo(ford, pickupPremium, "Ranger", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs, cabineDupla));
 
         modeloService.save(ka);
         modeloService.save(kaSedan);
@@ -421,10 +422,10 @@ public class DadosDemo {
         modeloService.save(cherokee);
 
         Modelo qq = new Modelo(chery, economico, "QQ", Arrays.asList(duasPortas, cincoPessoas, airbag, vidro, manual, flex, abs));
-        Modelo triggo2 = new Modelo(chery, suv, "Triggo 2", Arrays.asList());
-        Modelo arrizo = new Modelo(chery, executivo, "Arrizo 5", Arrays.asList());
-        Modelo triggo5x = new Modelo(chery, suv, "Triggo 5X", Arrays.asList());
-        Modelo trigo7 = new Modelo(chery, suv, "Triggo 7", Arrays.asList());
+        Modelo triggo2 = new Modelo(chery, suvPremium, "Triggo 2", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoHidraulica, abs));
+        Modelo arrizo = new Modelo(chery, executivo, "Arrizo 5", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo triggo5x = new Modelo(chery, suvPremium, "Triggo 5X", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
+        Modelo trigo7 = new Modelo(chery, suvPremium, "Triggo 7", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
 
         modeloService.save(qq);
         modeloService.save(triggo2);
@@ -432,21 +433,21 @@ public class DadosDemo {
         modeloService.save(triggo5x);
         modeloService.save(trigo7);
 
-        Modelo iev40 = new Modelo(jac, suv, "IEV 40", Arrays.asList());
-        Modelo t80 = new Modelo(jac, suv, "T80", Arrays.asList());
-        Modelo t50 = new Modelo(jac, suv, "T50", Arrays.asList());
-        Modelo t40 = new Modelo(jac, suv, "T40", Arrays.asList());
+        Modelo iev40 = new Modelo(jac, suv, "IEV 40", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, eletrico));
+        Modelo t80 = new Modelo(jac, suvPremium, "T80", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, manual, gasolina, direcaoEletrica, abs));
+        Modelo t50 = new Modelo(jac, suvPremium, "T50", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, gasolina, abs));
+        Modelo t40 = new Modelo(jac, suv, "T40", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
 
         modeloService.save(iev40);
         modeloService.save(t80);
         modeloService.save(t50);
         modeloService.save(t40);
 
-        Modelo hb20 = new Modelo(hyundai, intermediario, "HB20", Arrays.asList());
-        Modelo elantra = new Modelo(hyundai, executivo, "Elantra", Arrays.asList());
-        Modelo creta = new Modelo(hyundai, suv, "Creta", Arrays.asList());
-        Modelo ix35 = new Modelo(hyundai, suv, "ix35", Arrays.asList());
-        Modelo santaFe = new Modelo(hyundai, suv, "Santa Fé", Arrays.asList());
+        Modelo hb20 = new Modelo(hyundai, intermediarioPremium, "HB20", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo elantra = new Modelo(hyundai, executivo, "Elantra", Arrays.asList(quatroPortas, cincoPessoas, ar , airbag, automatico, vidro, trava, flex, abs));
+        Modelo creta = new Modelo(hyundai, suvPremium, "Creta", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, manual, flex, abs));
+        Modelo ix35 = new Modelo(hyundai, suv, "ix35", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, automatico, flex, abs));
+        Modelo santaFe = new Modelo(hyundai, suvPremium, "Santa Fé", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
 
         modeloService.save(hb20);
         modeloService.save(elantra);
@@ -454,12 +455,12 @@ public class DadosDemo {
         modeloService.save(ix35);
         modeloService.save(santaFe);
 
-        Modelo soul = new Modelo(kia, intermediario, "Soul", Arrays.asList());
-        Modelo cerato = new Modelo(kia, executivo, "Cerato", Arrays.asList());
-        Modelo stinger = new Modelo(kia, luxo, "Stinger", Arrays.asList());
-        Modelo sportage = new Modelo(kia, suv, "Sportage", Arrays.asList());
-        Modelo sorento = new Modelo(kia, suv, "Sorento", Arrays.asList());
-        Modelo carnival = new Modelo(kia, suv, "Grand Carnival", Arrays.asList());
+        Modelo soul = new Modelo(kia, intermediarioPremium, "Soul", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo cerato = new Modelo(kia, executivo, "Cerato", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo stinger = new Modelo(kia, luxo, "Stinger", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo sportage = new Modelo(kia, suv, "Sportage", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo sorento = new Modelo(kia, suvPremium, "Sorento", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo carnival = new Modelo(kia, suvPremium, "Grand Carnival", Arrays.asList(quatroPortas, oitoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
 
         modeloService.save(soul);
         modeloService.save(cerato);
