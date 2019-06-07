@@ -209,15 +209,15 @@ public class DadosDemo {
         // Modelo
         //////////////////////////////////////////////////
         
-        Modelo hiluxSimples = new Modelo(toyota, pickupPremium, "Hilux Cabine Simples", Arrays.asList(duasPortas, duasPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineSimples));
-        Modelo hiluxDupla = new Modelo(toyota, pickupPremium, "Hilux Cabine Dupla", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineDupla));
-        Modelo rav4 = new Modelo(toyota, suvPremium, "RAV4", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo sw4 = new Modelo(toyota, suvPremium, "SW4", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, diesel, automatico, direcaoHidraulica, abs));
-        Modelo prius = new Modelo(toyota, executivo, "Prius", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo yaris = new Modelo(toyota, intermediarioPremium, "Yaris", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo etios = new Modelo(toyota, intermediarioPremium, "Etios", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica));
-        Modelo corolla = new Modelo(toyota, executivo, "Corolla", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo camry = new Modelo(toyota, luxo, "Camry", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo hiluxSimples = new Modelo(toyota, pickupPremium, 2019, "Hilux Cabine Simples", Arrays.asList(duasPortas, duasPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineSimples));
+        Modelo hiluxDupla = new Modelo(toyota, pickupPremium, 2019, "Hilux Cabine Dupla", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineDupla));
+        Modelo rav4 = new Modelo(toyota, suvPremium, 2019, "RAV4", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo sw4 = new Modelo(toyota, suvPremium, 2019, "SW4", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, diesel, automatico, direcaoHidraulica, abs));
+        Modelo prius = new Modelo(toyota, executivo, 2019, "Prius", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo yaris = new Modelo(toyota, intermediarioPremium, 2019, "Yaris", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo etios = new Modelo(toyota, intermediarioPremium, 2019, "Etios", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica));
+        Modelo corolla = new Modelo(toyota, executivo, 2019, "Corolla", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo camry = new Modelo(toyota, luxo, 2019, "Camry", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
 
         modeloService.save(hiluxSimples);
         modeloService.save(hiluxDupla);
@@ -229,13 +229,13 @@ public class DadosDemo {
         modeloService.save(corolla);
         modeloService.save(camry);
 
-        Modelo fit = new Modelo(honda, intermediarioPremium, "Fit", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica, abs));
-        Modelo wrv = new Modelo(honda, suvPremium, "WR-V", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo hrv = new Modelo(honda, suvPremium, "HR-V", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo crv = new Modelo(honda, suvPremium, "CR-V", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo city = new Modelo(honda, executivo, "City", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo civic = new Modelo(honda, executivo, "Civic", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo accord = new Modelo(honda, luxo, "Accord", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo fit = new Modelo(honda, intermediarioPremium, 2019, "Fit", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica, abs));
+        Modelo wrv = new Modelo(honda, suvPremium, 2019, "WR-V", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo hrv = new Modelo(honda, suvPremium, 2019, "HR-V", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo crv = new Modelo(honda, suvPremium, 2019, "CR-V", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo city = new Modelo(honda, executivo, 2019, "City", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo civic = new Modelo(honda, executivo, 2019, "Civic", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo accord = new Modelo(honda, luxo, 2019, "Accord", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
 
         modeloService.save(fit);
         modeloService.save(wrv);
@@ -245,11 +245,11 @@ public class DadosDemo {
         modeloService.save(civic);
         modeloService.save(accord);
 
-        Modelo march = new Modelo(nissan, economicoPremium, "March", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, manual, direcaoEletrica));
-        Modelo versa = new Modelo(nissan, executivo, "Versa", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo sentra = new Modelo(nissan, executivo, "Sentra", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo kicks = new Modelo(nissan, suv, "Kicks", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo frontier = new Modelo(nissan, pickup, "Frontier", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, automatico, direcaoEletrica, abs, cabineDupla));
+        Modelo march = new Modelo(nissan, economicoPremium, 2019, "March", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, manual, direcaoEletrica));
+        Modelo versa = new Modelo(nissan, executivo, 2019, "Versa", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo sentra = new Modelo(nissan, executivo, 2019, "Sentra", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo kicks = new Modelo(nissan, suv, 2019, "Kicks", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo frontier = new Modelo(nissan, pickup, 2019, "Frontier", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, automatico, direcaoEletrica, abs, cabineDupla));
 
         modeloService.save(march);
         modeloService.save(versa);
@@ -257,12 +257,12 @@ public class DadosDemo {
         modeloService.save(kicks);
         modeloService.save(frontier);
 
-        Modelo l200 = new Modelo(mitsubishi, pickupPremium, "L200 Triton", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineDupla));
-        Modelo asx = new Modelo(mitsubishi, suvPremium, "ASX", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo eclipse = new Modelo(mitsubishi, suvPremium, "Eclipse Cross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo outlander = new Modelo(mitsubishi, suvPremium, "Outlander", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo pajero = new Modelo(mitsubishi, suvPremium, "Pajero Full", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
-        Modelo lancer = new Modelo(mitsubishi, luxo, "Lancer", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo l200 = new Modelo(mitsubishi, pickupPremium, 2019, "L200 Triton", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, diesel, manual, direcaoHidraulica, abs, cabineDupla));
+        Modelo asx = new Modelo(mitsubishi, suvPremium, 2019, "ASX", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo eclipse = new Modelo(mitsubishi, suvPremium, 2019, "Eclipse Cross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo outlander = new Modelo(mitsubishi, suvPremium, 2019, "Outlander", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo pajero = new Modelo(mitsubishi, suvPremium, 2019, "Pajero Full", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
+        Modelo lancer = new Modelo(mitsubishi, luxo, 2019, "Lancer", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, gasolina, automatico, direcaoEletrica, abs));
 
         modeloService.save(l200);
         modeloService.save(asx);
@@ -271,17 +271,17 @@ public class DadosDemo {
         modeloService.save(pajero);
         modeloService.save(lancer);
 
-        Modelo mobi = new Modelo(fiat, economico, "Mobi", Arrays.asList(quatroPortas, cincoPessoas, airbag, flex, manual));
-        Modelo uno = new Modelo(fiat, economicoPremium, "Uno", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, flex, manual, direcaoHidraulica, abs));
-        Modelo argo = new Modelo(fiat, intermediarioPremium, "Argo", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica, abs));
-        Modelo cronos = new Modelo(fiat, intermediarioPremium, "Cronos", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
-        Modelo toro = new Modelo(fiat, pickupPremium, "Toro", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs, cabineDupla));
-        Modelo siena = new Modelo(fiat, intermediario, "Grand Siena", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, flex, manual, direcaoHidraulica, abs));
-        Modelo weekend = new Modelo(fiat, intermediario, "Weekend", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoHidraulica, abs));
-        Modelo strada = new Modelo(fiat, pickup, "Strada", Arrays.asList(duasPortas, duasPessoas, airbag, flex, manual, abs, cabineDupla));
-        Modelo doblo = new Modelo(fiat, intermediario, "Doblò", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoHidraulica, abs));
-        Modelo fiorino = new Modelo(fiat, van, "Fiorino", Arrays.asList(duasPortas, duasPessoas, flex, manual, abs));
-        Modelo ducato = new Modelo(fiat, van, "Ducato", Arrays.asList(duasPortas, tresPessoas, vidro, trava, diesel, manual, direcaoHidraulica, abs));
+        Modelo mobi = new Modelo(fiat, economico, 2019, "Mobi", Arrays.asList(quatroPortas, cincoPessoas, airbag, flex, manual));
+        Modelo uno = new Modelo(fiat, economicoPremium, 2019, "Uno", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, flex, manual, direcaoHidraulica, abs));
+        Modelo argo = new Modelo(fiat, intermediarioPremium, 2019, "Argo", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoEletrica, abs));
+        Modelo cronos = new Modelo(fiat, intermediarioPremium, 2019, "Cronos", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs));
+        Modelo toro = new Modelo(fiat, pickupPremium, 2019, "Toro", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, automatico, direcaoEletrica, abs, cabineDupla));
+        Modelo siena = new Modelo(fiat, intermediario, 2019, "Grand Siena", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, flex, manual, direcaoHidraulica, abs));
+        Modelo weekend = new Modelo(fiat, intermediario, 2019, "Weekend", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoHidraulica, abs));
+        Modelo strada = new Modelo(fiat, pickup, 2019, "Strada", Arrays.asList(duasPortas, duasPessoas, airbag, flex, manual, abs, cabineDupla));
+        Modelo doblo = new Modelo(fiat, intermediario, 2019, "Doblò", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, direcaoHidraulica, abs));
+        Modelo fiorino = new Modelo(fiat, van, 2019, "Fiorino", Arrays.asList(duasPortas, duasPessoas, flex, manual, abs));
+        Modelo ducato = new Modelo(fiat, van, 2019, "Ducato", Arrays.asList(duasPortas, tresPessoas, vidro, trava, diesel, manual, direcaoHidraulica, abs));
 
         modeloService.save(mobi);
         modeloService.save(uno);
@@ -295,15 +295,15 @@ public class DadosDemo {
         modeloService.save(fiorino);
         modeloService.save(ducato);
 
-        Modelo kwid = new Modelo(renault, suv, "Kwid", Arrays.asList(quatroPortas, cincoPessoas, airbag, flex, manual, abs));
-        Modelo captur = new Modelo(renault, suvPremium, "Captur", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, abs));
-        Modelo oroch = new Modelo(renault, pickup, "Duster Oroch", Arrays.asList(quatroPortas, cincoPessoas, flex, manual, direcaoEletrica, abs, cabineDupla));
-        Modelo duster = new Modelo(renault, suv, "Duster", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, abs));
-        Modelo stepway = new Modelo(renault, intermediario, "Stepway", Arrays.asList(quatroPortas, cincoPessoas, airbag, trava, manual, flex, direcaoEletrica, abs));
-        Modelo sandero = new Modelo(renault, intermediario, "Sandero", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, trava, manual, flex, direcaoEletrica, abs));
-        Modelo logan = new Modelo(renault, intermediario, "Logan", Arrays.asList(quatroPortas, cincoPessoas, airbag, manual, flex, direcaoEletrica, abs));
-        Modelo zoe = new Modelo(renault, economico, "Zoe", Arrays.asList(quatroPortas, cincoPessoas, automatico, eletrico));
-        Modelo master = new Modelo(renault, vanPremium, "Master", Arrays.asList(quatroPortas, duasPessoas, airbag, automatico, diesel, abs));
+        Modelo kwid = new Modelo(renault, suv, 2019, "Kwid", Arrays.asList(quatroPortas, cincoPessoas, airbag, flex, manual, abs));
+        Modelo captur = new Modelo(renault, suvPremium, 2019, "Captur", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, abs));
+        Modelo oroch = new Modelo(renault, pickup, 2019, "Duster Oroch", Arrays.asList(quatroPortas, cincoPessoas, flex, manual, direcaoEletrica, abs, cabineDupla));
+        Modelo duster = new Modelo(renault, suv, 2019, "Duster", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, flex, manual, abs));
+        Modelo stepway = new Modelo(renault, intermediario, 2019, "Stepway", Arrays.asList(quatroPortas, cincoPessoas, airbag, trava, manual, flex, direcaoEletrica, abs));
+        Modelo sandero = new Modelo(renault, intermediario, 2019, "Sandero", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, trava, manual, flex, direcaoEletrica, abs));
+        Modelo logan = new Modelo(renault, intermediario, 2019, "Logan", Arrays.asList(quatroPortas, cincoPessoas, airbag, manual, flex, direcaoEletrica, abs));
+        Modelo zoe = new Modelo(renault, economico, 2019, "Zoe", Arrays.asList(quatroPortas, cincoPessoas, automatico, eletrico));
+        Modelo master = new Modelo(renault, vanPremium, 2019, "Master", Arrays.asList(quatroPortas, duasPessoas, airbag, automatico, diesel, abs));
 
         modeloService.save(kwid);
         modeloService.save(captur);
@@ -315,12 +315,12 @@ public class DadosDemo {
         modeloService.save(zoe);
         modeloService.save(master);
 
-        Modelo duzentos = new Modelo(peugeot, intermediario, "208", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
-        Modelo tresMil = new Modelo(peugeot, suv, "3008", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, manual, gasolina));
-        Modelo cicoMil = new Modelo(peugeot, suvPremium, "5008", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
-        Modelo partner = new Modelo(peugeot, van, "Partner", Arrays.asList(duasPortas, duasPessoas, ar, airbag, manual, flex));
-        Modelo expert = new Modelo(peugeot, vanPremium, "Expert", Arrays.asList(duasPortas, duasPessoas, ar, airbag, manual, diesel, abs));
-        Modelo boxer = new Modelo(peugeot, vanPremium, "Boxer", Arrays.asList(quatroPortas, duasPessoas, ar, airbag, manual, diesel, abs));
+        Modelo duzentos = new Modelo(peugeot, intermediario, 2019, "208", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
+        Modelo tresMil = new Modelo(peugeot, suv, 2019, "3008", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, manual, gasolina));
+        Modelo cicoMil = new Modelo(peugeot, suvPremium, 2019, "5008", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo partner = new Modelo(peugeot, van, 2019, "Partner", Arrays.asList(duasPortas, duasPessoas, ar, airbag, manual, flex));
+        Modelo expert = new Modelo(peugeot, vanPremium, 2019, "Expert", Arrays.asList(duasPortas, duasPessoas, ar, airbag, manual, diesel, abs));
+        Modelo boxer = new Modelo(peugeot, vanPremium, 2019, "Boxer", Arrays.asList(quatroPortas, duasPessoas, ar, airbag, manual, diesel, abs));
 
         modeloService.save(duzentos);
         modeloService.save(tresMil);
@@ -329,12 +329,12 @@ public class DadosDemo {
         modeloService.save(expert);
         modeloService.save(boxer);
 
-        Modelo c3 = new Modelo(citroen, intermediarioPremium, "C3", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
-        Modelo aircross = new Modelo(citroen, suv, "Aircross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
-        Modelo lounge = new Modelo(citroen, executivo, "C4 Lounge", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, direcaoHidraulica, flex));
-        Modelo cactus = new Modelo(citroen, suv, "C4 Cactus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, direcaoEletrica, flex));
-        Modelo jumpy = new Modelo(citroen, vanPremium, "Jumpy", Arrays.asList(quatroPortas, tresPessoas, ar, airbag, vidro, manual, diesel, abs));
-        Modelo berlingo = new Modelo(citroen, van, "Berlingo", Arrays.asList(duasPortas, duasPessoas, ar, manual, flex, abs));
+        Modelo c3 = new Modelo(citroen, intermediarioPremium, 2019, "C3", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
+        Modelo aircross = new Modelo(citroen, suv, 2019, "Aircross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
+        Modelo lounge = new Modelo(citroen, executivo, 2019, "C4 Lounge", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, direcaoHidraulica, flex));
+        Modelo cactus = new Modelo(citroen, suv, 2019, "C4 Cactus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, direcaoEletrica, flex));
+        Modelo jumpy = new Modelo(citroen, vanPremium, 2019, "Jumpy", Arrays.asList(quatroPortas, tresPessoas, ar, airbag, vidro, manual, diesel, abs));
+        Modelo berlingo = new Modelo(citroen, van, 2019, "Berlingo", Arrays.asList(duasPortas, duasPessoas, ar, manual, flex, abs));
 
         modeloService.save(c3);
         modeloService.save(aircross);
@@ -343,20 +343,20 @@ public class DadosDemo {
         modeloService.save(jumpy);
         modeloService.save(berlingo);
 
-        Modelo up = new Modelo(volkswagen, economicoPremium, "up!", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
-        Modelo gol = new Modelo(volkswagen, intermediario, "Gol", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
-        Modelo fox = new Modelo(volkswagen, intermediario, "Fox", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
-        Modelo polo = new Modelo(volkswagen, intermediario, "Novo Polo", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
-        Modelo golf = new Modelo(volkswagen, executivo, "Golf", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo virtus = new Modelo(volkswagen, executivo, "Virtus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo voyage = new Modelo(volkswagen, executivo, "Voyage", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo jetta = new Modelo(volkswagen, executivo, "Jetta", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo passat = new Modelo(volkswagen, executivo, "Passat", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo tcross = new Modelo(volkswagen, suvPremium, "T-Cross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo tiguan = new Modelo(volkswagen, suvPremium, "Tiguan Allspace", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo spacefox = new Modelo(volkswagen, intermediario, "SpaceFox", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
-        Modelo saveiro = new Modelo(volkswagen, pickup, "Saveiro", Arrays.asList(duasPortas, cincoPessoas, ar, manual, flex, cabineDupla));
-        Modelo amorok = new Modelo(volkswagen, pickupPremium, "Amarok", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, diesel, abs, cabineDupla));
+        Modelo up = new Modelo(volkswagen, economicoPremium, 2019, "up!", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo gol = new Modelo(volkswagen, intermediario, 2019, "Gol", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo fox = new Modelo(volkswagen, intermediario, 2019, "Fox", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo polo = new Modelo(volkswagen, intermediario, 2019, "Novo Polo", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo golf = new Modelo(volkswagen, executivo, 2019, "Golf", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo virtus = new Modelo(volkswagen, executivo, 2019, "Virtus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo voyage = new Modelo(volkswagen, executivo, 2019, "Voyage", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo jetta = new Modelo(volkswagen, executivo, 2019, "Jetta", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo passat = new Modelo(volkswagen, executivo, 2019, "Passat", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo tcross = new Modelo(volkswagen, suvPremium, 2019, "T-Cross", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo tiguan = new Modelo(volkswagen, suvPremium, 2019, "Tiguan Allspace", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo spacefox = new Modelo(volkswagen, intermediario, 2019, "SpaceFox", Arrays.asList(quatroPortas, cincoPessoas, ar, manual, flex));
+        Modelo saveiro = new Modelo(volkswagen, pickup, 2019, "Saveiro", Arrays.asList(duasPortas, cincoPessoas, ar, manual, flex, cabineDupla));
+        Modelo amorok = new Modelo(volkswagen, pickupPremium, 2019, "Amarok", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, diesel, abs, cabineDupla));
 
         modeloService.save(up);
         modeloService.save(gol);
@@ -373,16 +373,16 @@ public class DadosDemo {
         modeloService.save(saveiro);
         modeloService.save(amorok);
 
-        Modelo onix = new Modelo(chevrolet, intermediarioPremium, "Onix", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
-        Modelo prisma = new Modelo(chevrolet, intermediarioPremium, "Prisma", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoEletrica, abs));
-        Modelo cobalt = new Modelo(chevrolet, intermediarioPremium, "Cobalt", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
-        Modelo spin = new Modelo(chevrolet, suv, "Spin", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
-        Modelo cruze = new Modelo(chevrolet, executivo, "Cruze", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
-        Modelo tracker = new Modelo(chevrolet, suvPremium, "Tracker", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
-        Modelo equinox = new Modelo(chevrolet, suvPremium, "Equinox", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
-        Modelo trailblazer = new Modelo(chevrolet, suvPremium, "Trailblazer", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
-        Modelo montana = new Modelo(chevrolet, pickup, "Montana", Arrays.asList(quatroPortas, duasPessoas, ar, airbag, vidro, trava, manual, flex, direcaoHidraulica, abs, cabineSimples));
-        Modelo s10 = new Modelo(chevrolet, pickupPremium, "S10", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs, cabineDupla));
+        Modelo onix = new Modelo(chevrolet, intermediarioPremium, 2019, "Onix", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo prisma = new Modelo(chevrolet, intermediarioPremium, 2019, "Prisma", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoEletrica, abs));
+        Modelo cobalt = new Modelo(chevrolet, intermediarioPremium, 2019, "Cobalt", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo spin = new Modelo(chevrolet, suv, 2019, "Spin", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo cruze = new Modelo(chevrolet, executivo, 2019, "Cruze", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo tracker = new Modelo(chevrolet, suvPremium, 2019, "Tracker", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo equinox = new Modelo(chevrolet, suvPremium, 2019, "Equinox", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo trailblazer = new Modelo(chevrolet, suvPremium, 2019, "Trailblazer", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo montana = new Modelo(chevrolet, pickup, 2019, "Montana", Arrays.asList(quatroPortas, duasPessoas, ar, airbag, vidro, trava, manual, flex, direcaoHidraulica, abs, cabineSimples));
+        Modelo s10 = new Modelo(chevrolet, pickupPremium, 2019, "S10", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs, cabineDupla));
 
         modeloService.save(onix);
         modeloService.save(prisma);
@@ -395,14 +395,14 @@ public class DadosDemo {
         modeloService.save(montana);
         modeloService.save(s10);
 
-        Modelo ka = new Modelo(ford, economico, "Ka", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
-        Modelo kaSedan = new Modelo(ford, intermediario, "Ka Sedãn", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
-        Modelo fiesta = new Modelo(ford, intermediario, "New Fiesta", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
-        Modelo focus = new Modelo(ford, intermediarioPremium, "Focus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
-        Modelo fusion = new Modelo(ford, executivo, "Fusion", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
-        Modelo ecosport = new Modelo(ford, suv, "EcoSport", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
-        Modelo edge = new Modelo(ford, suvPremium, "Novo Edge ST", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo ranger = new Modelo(ford, pickupPremium, "Ranger", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs, cabineDupla));
+        Modelo ka = new Modelo(ford, economico, 2019, "Ka", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo kaSedan = new Modelo(ford, intermediario, 2019, "Ka Sedãn", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo fiesta = new Modelo(ford, intermediario, 2019, "New Fiesta", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo focus = new Modelo(ford, intermediarioPremium, 2019, "Focus", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
+        Modelo fusion = new Modelo(ford, executivo, 2019, "Fusion", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo ecosport = new Modelo(ford, suv, 2019, "EcoSport", Arrays.asList(quatroPortas, cincoPessoas, manual, flex));
+        Modelo edge = new Modelo(ford, suvPremium, 2019, "Novo Edge ST", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo ranger = new Modelo(ford, pickupPremium, 2019, "Ranger", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs, cabineDupla));
 
         modeloService.save(ka);
         modeloService.save(kaSedan);
@@ -413,19 +413,19 @@ public class DadosDemo {
         modeloService.save(edge);
         modeloService.save(ranger);
 
-        Modelo renegade = new Modelo(jeep, suv, "Renegade", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoEletrica, abs));
-        Modelo compass = new Modelo(jeep, suvPremium, "Compass", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, direcaoEletrica, abs));
-        Modelo cherokee = new Modelo(jeep, suvPremium, "Grand Cherokee", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo renegade = new Modelo(jeep, suv, 2019, "Renegade", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoEletrica, abs));
+        Modelo compass = new Modelo(jeep, suvPremium, 2019, "Compass", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, direcaoEletrica, abs));
+        Modelo cherokee = new Modelo(jeep, suvPremium, 2019, "Grand Cherokee", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
 
         modeloService.save(renegade);
         modeloService.save(compass);
         modeloService.save(cherokee);
 
-        Modelo qq = new Modelo(chery, economico, "QQ", Arrays.asList(duasPortas, cincoPessoas, airbag, vidro, manual, flex, abs));
-        Modelo triggo2 = new Modelo(chery, suvPremium, "Triggo 2", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoHidraulica, abs));
-        Modelo arrizo = new Modelo(chery, executivo, "Arrizo 5", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo triggo5x = new Modelo(chery, suvPremium, "Triggo 5X", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
-        Modelo trigo7 = new Modelo(chery, suvPremium, "Triggo 7", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
+        Modelo qq = new Modelo(chery, economico, 2019, "QQ", Arrays.asList(duasPortas, cincoPessoas, airbag, vidro, manual, flex, abs));
+        Modelo triggo2 = new Modelo(chery, suvPremium, 2019, "Triggo 2", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, direcaoHidraulica, abs));
+        Modelo arrizo = new Modelo(chery, executivo, 2019, "Arrizo 5", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo triggo5x = new Modelo(chery, suvPremium, 2019, "Triggo 5X", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, abs));
+        Modelo trigo7 = new Modelo(chery, suvPremium, 2019, "Triggo 7", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, manual, flex, direcaoEletrica, abs));
 
         modeloService.save(qq);
         modeloService.save(triggo2);
@@ -433,21 +433,21 @@ public class DadosDemo {
         modeloService.save(triggo5x);
         modeloService.save(trigo7);
 
-        Modelo iev40 = new Modelo(jac, suv, "IEV 40", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, eletrico));
-        Modelo t80 = new Modelo(jac, suvPremium, "T80", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, manual, gasolina, direcaoEletrica, abs));
-        Modelo t50 = new Modelo(jac, suvPremium, "T50", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, gasolina, abs));
-        Modelo t40 = new Modelo(jac, suv, "T40", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo iev40 = new Modelo(jac, suv, 2019, "IEV 40", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, automatico, eletrico));
+        Modelo t80 = new Modelo(jac, suvPremium, 2019, "T80", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, manual, gasolina, direcaoEletrica, abs));
+        Modelo t50 = new Modelo(jac, suvPremium, 2019, "T50", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, gasolina, abs));
+        Modelo t40 = new Modelo(jac, suv, 2019, "T40", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
 
         modeloService.save(iev40);
         modeloService.save(t80);
         modeloService.save(t50);
         modeloService.save(t40);
 
-        Modelo hb20 = new Modelo(hyundai, intermediarioPremium, "HB20", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
-        Modelo elantra = new Modelo(hyundai, executivo, "Elantra", Arrays.asList(quatroPortas, cincoPessoas, ar , airbag, automatico, vidro, trava, flex, abs));
-        Modelo creta = new Modelo(hyundai, suvPremium, "Creta", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, manual, flex, abs));
-        Modelo ix35 = new Modelo(hyundai, suv, "ix35", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, automatico, flex, abs));
-        Modelo santaFe = new Modelo(hyundai, suvPremium, "Santa Fé", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
+        Modelo hb20 = new Modelo(hyundai, intermediarioPremium, 2019, "HB20", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, manual, flex, abs));
+        Modelo elantra = new Modelo(hyundai, executivo, 2019, "Elantra", Arrays.asList(quatroPortas, cincoPessoas, ar , airbag, automatico, vidro, trava, flex, abs));
+        Modelo creta = new Modelo(hyundai, suvPremium, 2019, "Creta", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, manual, flex, abs));
+        Modelo ix35 = new Modelo(hyundai, suv, 2019, "ix35", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, automatico, flex, abs));
+        Modelo santaFe = new Modelo(hyundai, suvPremium, 2019, "Santa Fé", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, automatico, gasolina, direcaoEletrica, abs));
 
         modeloService.save(hb20);
         modeloService.save(elantra);
@@ -455,12 +455,12 @@ public class DadosDemo {
         modeloService.save(ix35);
         modeloService.save(santaFe);
 
-        Modelo soul = new Modelo(kia, intermediarioPremium, "Soul", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo cerato = new Modelo(kia, executivo, "Cerato", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo stinger = new Modelo(kia, luxo, "Stinger", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
-        Modelo sportage = new Modelo(kia, suv, "Sportage", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
-        Modelo sorento = new Modelo(kia, suvPremium, "Sorento", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
-        Modelo carnival = new Modelo(kia, suvPremium, "Grand Carnival", Arrays.asList(quatroPortas, oitoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo soul = new Modelo(kia, intermediarioPremium, 2019, "Soul", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo cerato = new Modelo(kia, executivo, 2019, "Cerato", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo stinger = new Modelo(kia, luxo, 2019, "Stinger", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo sportage = new Modelo(kia, suv, 2019, "Sportage", Arrays.asList(quatroPortas, cincoPessoas, ar, airbag, vidro, trava, automatico, flex, abs));
+        Modelo sorento = new Modelo(kia, suvPremium, 2019, "Sorento", Arrays.asList(quatroPortas, setePessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
+        Modelo carnival = new Modelo(kia, suvPremium, 2019, "Grand Carnival", Arrays.asList(quatroPortas, oitoPessoas, ar, airbag, vidro, trava, automatico, gasolina, abs));
 
         modeloService.save(soul);
         modeloService.save(cerato);
@@ -489,117 +489,117 @@ public class DadosDemo {
         // Veículo
         //////////////////////////////////////////////////
         
-        veiculoService.save(new Veiculo(hiluxSimples, prata, 2019, "GJD6696", "92310486078"));
-        veiculoService.save(new Veiculo(hiluxDupla, prata, 2019, "CRN9782", "39006842190"));
-        veiculoService.save(new Veiculo(rav4, prata, 2019, "GCF5081", "25788669562"));
-        veiculoService.save(new Veiculo(sw4, prata, 2019, "FFB3950", "09163556915"));
-        veiculoService.save(new Veiculo(prius, prata, 2019, "CLG0937", "29411004466"));
-        veiculoService.save(new Veiculo(yaris, prata, 2019, "CKD8490", "08550327326"));
-        veiculoService.save(new Veiculo(etios, prata, 2019, "CDO3095", "81449200392"));
-        veiculoService.save(new Veiculo(corolla, prata, 2019, "BZI1456", "86284452294"));
-        veiculoService.save(new Veiculo(camry, prata, 2019, "GDT8369", "09630389806"));
+        veiculoService.save(new Veiculo(hiluxSimples, prata, "GJD6696", "92310486078"));
+        veiculoService.save(new Veiculo(hiluxDupla, prata, "CRN9782", "39006842190"));
+        veiculoService.save(new Veiculo(rav4, prata, "GCF5081", "25788669562"));
+        veiculoService.save(new Veiculo(sw4, prata, "FFB3950", "09163556915"));
+        veiculoService.save(new Veiculo(prius, prata, "CLG0937", "29411004466"));
+        veiculoService.save(new Veiculo(yaris, prata, "CKD8490", "08550327326"));
+        veiculoService.save(new Veiculo(etios, prata, "CDO3095", "81449200392"));
+        veiculoService.save(new Veiculo(corolla, prata, "BZI1456", "86284452294"));
+        veiculoService.save(new Veiculo(camry, prata, "GDT8369", "09630389806"));
 
-        veiculoService.save(new Veiculo(fit, prata, 2019, "CBP6843", "21177229902"));
-        veiculoService.save(new Veiculo(wrv, prata, 2019, "FXW2379", "86290411065"));
-        veiculoService.save(new Veiculo(hrv, prata, 2019, "BIE9515", "15500341018"));
-        veiculoService.save(new Veiculo(crv, prata, 2019, "GEX6475", "98691235695"));
-        veiculoService.save(new Veiculo(city, prata, 2019, "DCI2433", "88928152085"));
-        veiculoService.save(new Veiculo(civic, prata, 2019, "BXV5782", "85402950177"));
-        veiculoService.save(new Veiculo(accord, prata, 2019, "EDH6049", "32895629613"));
+        veiculoService.save(new Veiculo(fit, prata, "CBP6843", "21177229902"));
+        veiculoService.save(new Veiculo(wrv, prata, "FXW2379", "86290411065"));
+        veiculoService.save(new Veiculo(hrv, prata, "BIE9515", "15500341018"));
+        veiculoService.save(new Veiculo(crv, prata, "GEX6475", "98691235695"));
+        veiculoService.save(new Veiculo(city, prata, "DCI2433", "88928152085"));
+        veiculoService.save(new Veiculo(civic, prata, "BXV5782", "85402950177"));
+        veiculoService.save(new Veiculo(accord, prata, "EDH6049", "32895629613"));
 
-        veiculoService.save(new Veiculo(march, prata, 2019, "BUY1145", "76903336669"));
-        veiculoService.save(new Veiculo(versa, prata, 2019, "EEF0927", "75832268552"));
-        veiculoService.save(new Veiculo(sentra, prata, 2019, "FSX3775", "87784171217"));
-        veiculoService.save(new Veiculo(kicks, prata, 2019, "DTY0260", "22837666776"));
-        veiculoService.save(new Veiculo(frontier, prata, 2019, "DMX2691", "38693381156"));
+        veiculoService.save(new Veiculo(march, prata, "BUY1145", "76903336669"));
+        veiculoService.save(new Veiculo(versa, prata, "EEF0927", "75832268552"));
+        veiculoService.save(new Veiculo(sentra, prata, "FSX3775", "87784171217"));
+        veiculoService.save(new Veiculo(kicks, prata, "DTY0260", "22837666776"));
+        veiculoService.save(new Veiculo(frontier, prata, "DMX2691", "38693381156"));
 
-        veiculoService.save(new Veiculo(l200, prata, 2019, "DSB2133", "50413225247"));
-        veiculoService.save(new Veiculo(asx, prata, 2019, "FGT7895", "95491527779"));
-        veiculoService.save(new Veiculo(eclipse, prata, 2019, "BYE0407", "57071263644"));
-        veiculoService.save(new Veiculo(outlander, prata, 2019, "BQY8257", "52838358678"));
-        veiculoService.save(new Veiculo(pajero, prata, 2019, "FJB5337", "31808559010"));
-        veiculoService.save(new Veiculo(lancer, prata, 2019, "CZZ8413", "67458161854"));
+        veiculoService.save(new Veiculo(l200, prata, "DSB2133", "50413225247"));
+        veiculoService.save(new Veiculo(asx, prata, "FGT7895", "95491527779"));
+        veiculoService.save(new Veiculo(eclipse, prata, "BYE0407", "57071263644"));
+        veiculoService.save(new Veiculo(outlander, prata, "BQY8257", "52838358678"));
+        veiculoService.save(new Veiculo(pajero, prata, "FJB5337", "31808559010"));
+        veiculoService.save(new Veiculo(lancer, prata, "CZZ8413", "67458161854"));
 
-        veiculoService.save(new Veiculo(mobi, prata, 2019, "ENW8059", "59966583647"));
-        veiculoService.save(new Veiculo(uno, prata, 2019, "ENR1814", "96279496120"));
-        veiculoService.save(new Veiculo(argo, prata, 2019, "BPF8751", "43713039276"));
-        veiculoService.save(new Veiculo(cronos, prata, 2019, "EIZ6944", "66622103574"));
-        veiculoService.save(new Veiculo(toro, prata, 2019, "CNG8591", "77326708497"));
-        veiculoService.save(new Veiculo(siena, prata, 2019, "BYG0273", "07196447558"));
-        veiculoService.save(new Veiculo(weekend, prata, 2019, "FUO9612", "42445974287"));
-        veiculoService.save(new Veiculo(strada, prata, 2019, "EYA8865", "60235102370"));
-        veiculoService.save(new Veiculo(doblo, prata, 2019, "CVY6061", "96960254093"));
-        veiculoService.save(new Veiculo(fiorino, prata, 2019, "EZM4220", "51039991738"));
-        veiculoService.save(new Veiculo(ducato, prata, 2019, "EDO9325", "32046492591"));
+        veiculoService.save(new Veiculo(mobi, prata, "ENW8059", "59966583647"));
+        veiculoService.save(new Veiculo(uno, prata, "ENR1814", "96279496120"));
+        veiculoService.save(new Veiculo(argo, prata, "BPF8751", "43713039276"));
+        veiculoService.save(new Veiculo(cronos, prata, "EIZ6944", "66622103574"));
+        veiculoService.save(new Veiculo(toro, prata, "CNG8591", "77326708497"));
+        veiculoService.save(new Veiculo(siena, prata, "BYG0273", "07196447558"));
+        veiculoService.save(new Veiculo(weekend, prata, "FUO9612", "42445974287"));
+        veiculoService.save(new Veiculo(strada, prata, "EYA8865", "60235102370"));
+        veiculoService.save(new Veiculo(doblo, prata, "CVY6061", "96960254093"));
+        veiculoService.save(new Veiculo(fiorino, prata, "EZM4220", "51039991738"));
+        veiculoService.save(new Veiculo(ducato, prata, "EDO9325", "32046492591"));
 
-        veiculoService.save(new Veiculo(kwid, prata, 2019, "END5346", "22686044682"));
-        veiculoService.save(new Veiculo(captur, prata, 2019, "CZH2387", "91733972296"));
-        veiculoService.save(new Veiculo(oroch, prata, 2019, "CJE1041", "91895651860"));
-        veiculoService.save(new Veiculo(duster, prata, 2019, "ELB2390", "43496029901"));
-        veiculoService.save(new Veiculo(stepway, prata, 2019, "DGT9342", "70913069540"));
-        veiculoService.save(new Veiculo(sandero, prata, 2019, "CFM0939", "49996825285"));
-        veiculoService.save(new Veiculo(logan, prata, 2019, "GEX7440", "12065966523"));
-        veiculoService.save(new Veiculo(zoe, prata, 2019, "GFB0194", "73154795068"));
-        veiculoService.save(new Veiculo(master, prata, 2019, "FDP8091", "37936584776"));
+        veiculoService.save(new Veiculo(kwid, prata, "END5346", "22686044682"));
+        veiculoService.save(new Veiculo(captur, prata, "CZH2387", "91733972296"));
+        veiculoService.save(new Veiculo(oroch, prata, "CJE1041", "91895651860"));
+        veiculoService.save(new Veiculo(duster, prata, "ELB2390", "43496029901"));
+        veiculoService.save(new Veiculo(stepway, prata, "DGT9342", "70913069540"));
+        veiculoService.save(new Veiculo(sandero, prata, "CFM0939", "49996825285"));
+        veiculoService.save(new Veiculo(logan, prata, "GEX7440", "12065966523"));
+        veiculoService.save(new Veiculo(zoe, prata, "GFB0194", "73154795068"));
+        veiculoService.save(new Veiculo(master, prata, "FDP8091", "37936584776"));
 
-        veiculoService.save(new Veiculo(duzentos, prata, 2019, "CNN3130", "58984648927"));
-        veiculoService.save(new Veiculo(tresMil, prata, 2019, "DKA5893", "79779940398"));
-        veiculoService.save(new Veiculo(cicoMil, prata, 2019, "DYM3124", "83285885769"));
-        veiculoService.save(new Veiculo(partner, prata, 2019, "CVT8689", "95990182548"));
-        veiculoService.save(new Veiculo(expert, prata, 2019, "EWX4978", "73118007314"));
-        veiculoService.save(new Veiculo(boxer, prata, 2019, "CSA9214", "82174173851"));
+        veiculoService.save(new Veiculo(duzentos, prata, "CNN3130", "58984648927"));
+        veiculoService.save(new Veiculo(tresMil, prata, "DKA5893", "79779940398"));
+        veiculoService.save(new Veiculo(cicoMil, prata, "DYM3124", "83285885769"));
+        veiculoService.save(new Veiculo(partner, prata, "CVT8689", "95990182548"));
+        veiculoService.save(new Veiculo(expert, prata, "EWX4978", "73118007314"));
+        veiculoService.save(new Veiculo(boxer, prata, "CSA9214", "82174173851"));
 
-        veiculoService.save(new Veiculo(c3, prata, 2019, "EGN2562", "57947506237"));
-        veiculoService.save(new Veiculo(aircross, prata, 2019, "EYS2505", "58139266234"));
-        veiculoService.save(new Veiculo(lounge, prata, 2019, "FKJ3074", "42859497351"));
-        veiculoService.save(new Veiculo(cactus, prata, 2019, "DQL3464", "20260913167"));
-        veiculoService.save(new Veiculo(jumpy, prata, 2019, "DWH8279", "33109564550"));
-        veiculoService.save(new Veiculo(berlingo, prata, 2019, "GBK8550", "69366291219"));
+        veiculoService.save(new Veiculo(c3, prata, "EGN2562", "57947506237"));
+        veiculoService.save(new Veiculo(aircross, prata, "EYS2505", "58139266234"));
+        veiculoService.save(new Veiculo(lounge, prata, "FKJ3074", "42859497351"));
+        veiculoService.save(new Veiculo(cactus, prata, "DQL3464", "20260913167"));
+        veiculoService.save(new Veiculo(jumpy, prata, "DWH8279", "33109564550"));
+        veiculoService.save(new Veiculo(berlingo, prata, "GBK8550", "69366291219"));
 
-        veiculoService.save(new Veiculo(up, prata, 2019, "FBT2523", "21946107354"));
-        veiculoService.save(new Veiculo(gol, prata, 2019, "ENW9799", "99928831441"));
-        veiculoService.save(new Veiculo(fox, prata, 2019, "CCJ9745", "35227378825"));
-        veiculoService.save(new Veiculo(polo, prata, 2019, "FZC0260", "71139752632"));
-        veiculoService.save(new Veiculo(golf, prata, 2019, "FRG6295", "47216442423"));
-        veiculoService.save(new Veiculo(virtus, prata, 2019, "FRB7326", "77864801902"));
-        veiculoService.save(new Veiculo(voyage, prata, 2019, "GFV3628", "84165624168"));
-        veiculoService.save(new Veiculo(jetta, prata, 2019, "FJU2078", "90265499165"));
-        veiculoService.save(new Veiculo(passat, prata, 2019, "CVR2571", "62266815804"));
-        veiculoService.save(new Veiculo(tcross, prata, 2019, "CAR0635", "43463758165"));
-        veiculoService.save(new Veiculo(tiguan, prata, 2019, "GEK8096", "21509140176"));
-        veiculoService.save(new Veiculo(spacefox, prata, 2019, "DES6811", "36708980520"));
-        veiculoService.save(new Veiculo(saveiro, prata, 2019, "EIE7872", "87093204154"));
-        veiculoService.save(new Veiculo(amorok, prata, 2019, "GFI9223", "65332868332"));
+        veiculoService.save(new Veiculo(up, prata, "FBT2523", "21946107354"));
+        veiculoService.save(new Veiculo(gol, prata, "ENW9799", "99928831441"));
+        veiculoService.save(new Veiculo(fox, prata, "CCJ9745", "35227378825"));
+        veiculoService.save(new Veiculo(polo, prata, "FZC0260", "71139752632"));
+        veiculoService.save(new Veiculo(golf, prata, "FRG6295", "47216442423"));
+        veiculoService.save(new Veiculo(virtus, prata, "FRB7326", "77864801902"));
+        veiculoService.save(new Veiculo(voyage, prata, "GFV3628", "84165624168"));
+        veiculoService.save(new Veiculo(jetta, prata, "FJU2078", "90265499165"));
+        veiculoService.save(new Veiculo(passat, prata, "CVR2571", "62266815804"));
+        veiculoService.save(new Veiculo(tcross, prata, "CAR0635", "43463758165"));
+        veiculoService.save(new Veiculo(tiguan, prata, "GEK8096", "21509140176"));
+        veiculoService.save(new Veiculo(spacefox, prata, "DES6811", "36708980520"));
+        veiculoService.save(new Veiculo(saveiro, prata, "EIE7872", "87093204154"));
+        veiculoService.save(new Veiculo(amorok, prata, "GFI9223", "65332868332"));
 
-        veiculoService.save(new Veiculo(onix, prata, 2019, "CPL0946", "11141790909"));
-        veiculoService.save(new Veiculo(prisma, prata, 2019, "EBM4292", "50798248781"));
-        veiculoService.save(new Veiculo(cobalt, prata, 2019, "DLW2065", "62195558006"));
-        veiculoService.save(new Veiculo(spin, prata, 2019, "FJS6736", "99711163358"));
-        veiculoService.save(new Veiculo(cruze, prata, 2019, "EUV8373", "39133738480"));
-        veiculoService.save(new Veiculo(tracker, prata, 2019, "GJS8341", "38159074476"));
-        veiculoService.save(new Veiculo(equinox, prata, 2019, "DMK6455", "92370051388"));
-        veiculoService.save(new Veiculo(trailblazer, prata, 2019, "FJM1171", "82883724949"));
-        veiculoService.save(new Veiculo(montana, prata, 2019, "GGX7156", "50882276928"));
-        veiculoService.save(new Veiculo(s10, prata, 2019, "EIJ6989", "26326198664"));
+        veiculoService.save(new Veiculo(onix, prata, "CPL0946", "11141790909"));
+        veiculoService.save(new Veiculo(prisma, prata, "EBM4292", "50798248781"));
+        veiculoService.save(new Veiculo(cobalt, prata, "DLW2065", "62195558006"));
+        veiculoService.save(new Veiculo(spin, prata, "FJS6736", "99711163358"));
+        veiculoService.save(new Veiculo(cruze, prata, "EUV8373", "39133738480"));
+        veiculoService.save(new Veiculo(tracker, prata, "GJS8341", "38159074476"));
+        veiculoService.save(new Veiculo(equinox, prata, "DMK6455", "92370051388"));
+        veiculoService.save(new Veiculo(trailblazer, prata, "FJM1171", "82883724949"));
+        veiculoService.save(new Veiculo(montana, prata, "GGX7156", "50882276928"));
+        veiculoService.save(new Veiculo(s10, prata, "EIJ6989", "26326198664"));
 
-        veiculoService.save(new Veiculo(ka, prata, 2019, "FFN5370", "98517418216"));
-        veiculoService.save(new Veiculo(kaSedan, prata, 2019, "ECA1601", "61528446683"));
-        veiculoService.save(new Veiculo(fiesta, prata, 2019, "EEC4136", "90658768161"));
-        veiculoService.save(new Veiculo(focus, prata, 2019, "FUS1626", "11116704760"));
-        veiculoService.save(new Veiculo(fusion, prata, 2019, "BUT6817", "29544880178"));
-        veiculoService.save(new Veiculo(ecosport, prata, 2019, "DXZ4788", "10543678471"));
-        veiculoService.save(new Veiculo(edge, prata, 2019, "EHL2907", "19157023355"));
-        veiculoService.save(new Veiculo(ranger, prata, 2019, "FLH2285", "77621041660"));
+        veiculoService.save(new Veiculo(ka, prata, "FFN5370", "98517418216"));
+        veiculoService.save(new Veiculo(kaSedan, prata, "ECA1601", "61528446683"));
+        veiculoService.save(new Veiculo(fiesta, prata, "EEC4136", "90658768161"));
+        veiculoService.save(new Veiculo(focus, prata, "FUS1626", "11116704760"));
+        veiculoService.save(new Veiculo(fusion, prata, "BUT6817", "29544880178"));
+        veiculoService.save(new Veiculo(ecosport, prata, "DXZ4788", "10543678471"));
+        veiculoService.save(new Veiculo(edge, prata, "EHL2907", "19157023355"));
+        veiculoService.save(new Veiculo(ranger, prata, "FLH2285", "77621041660"));
 
-        veiculoService.save(new Veiculo(renegade, prata, 2019, "BWP9158", "15076012091"));
-        veiculoService.save(new Veiculo(compass, prata, 2019, "BSC6316", "48439059334"));
-        veiculoService.save(new Veiculo(cherokee, prata, 2019, "DNZ6985", "66558274105"));
+        veiculoService.save(new Veiculo(renegade, prata, "BWP9158", "15076012091"));
+        veiculoService.save(new Veiculo(compass, prata, "BSC6316", "48439059334"));
+        veiculoService.save(new Veiculo(cherokee, prata, "DNZ6985", "66558274105"));
 
-        Veiculo v1 = new Veiculo(qq, prata, 2019, "CIH2284", "29559736370");
-        Veiculo v2 = new Veiculo(triggo2, prata, 2019, "CPW6480", "96525928027");
-        Veiculo v3 = new Veiculo(arrizo, prata, 2019, "CRK2922", "52278513037");
-        Veiculo v4 = new Veiculo(triggo5x, prata, 2019, "BNV6109", "74344706579");
-        Veiculo v5 = new Veiculo(trigo7, prata, 2019, "EBG5278", "48745679905");
+        Veiculo v1 = new Veiculo(qq, prata, "CIH2284", "29559736370");
+        Veiculo v2 = new Veiculo(triggo2, prata, "CPW6480", "96525928027");
+        Veiculo v3 = new Veiculo(arrizo, prata, "CRK2922", "52278513037");
+        Veiculo v4 = new Veiculo(triggo5x, prata, "BNV6109", "74344706579");
+        Veiculo v5 = new Veiculo(trigo7, prata, "EBG5278", "48745679905");
 
         veiculoService.save(v1);
         veiculoService.save(v2);
@@ -607,23 +607,23 @@ public class DadosDemo {
         veiculoService.save(v4);
         veiculoService.save(v5);
 
-        veiculoService.save(new Veiculo(iev40, prata, 2019, "BJI0975", "25383236962"));
-        veiculoService.save(new Veiculo(t80, prata, 2019, "FAU0813", "90643946735"));
-        veiculoService.save(new Veiculo(t50, prata, 2019, "BHS1348", "64629945485"));
-        veiculoService.save(new Veiculo(t40, prata, 2019, "CIM2818", "29243138235"));
+        veiculoService.save(new Veiculo(iev40, prata, "BJI0975", "25383236962"));
+        veiculoService.save(new Veiculo(t80, prata, "FAU0813", "90643946735"));
+        veiculoService.save(new Veiculo(t50, prata, "BHS1348", "64629945485"));
+        veiculoService.save(new Veiculo(t40, prata, "CIM2818", "29243138235"));
 
-        veiculoService.save(new Veiculo(hb20, prata, 2019, "BQX0818", "63217935069"));
-        veiculoService.save(new Veiculo(elantra, prata, 2019, "FLJ8555", "72889569263"));
-        veiculoService.save(new Veiculo(creta, prata, 2019, "CZS8775", "89707394777"));
-        veiculoService.save(new Veiculo(ix35, prata, 2019, "EKL7973", "01921165046"));
-        veiculoService.save(new Veiculo(santaFe, prata, 2019, "EGJ1604", "48809881173"));
+        veiculoService.save(new Veiculo(hb20, prata, "BQX0818", "63217935069"));
+        veiculoService.save(new Veiculo(elantra, prata, "FLJ8555", "72889569263"));
+        veiculoService.save(new Veiculo(creta, prata, "CZS8775", "89707394777"));
+        veiculoService.save(new Veiculo(ix35, prata, "EKL7973", "01921165046"));
+        veiculoService.save(new Veiculo(santaFe, prata, "EGJ1604", "48809881173"));
 
-        veiculoService.save(new Veiculo(soul, prata, 2019, "EDT3016", "17271747328"));
-        veiculoService.save(new Veiculo(cerato, prata, 2019, "FRZ7130", "24232339012"));
-        veiculoService.save(new Veiculo(stinger, prata, 2019, "DZN1492", "18226874918"));
-        veiculoService.save(new Veiculo(sportage, prata, 2019, "ETK6334", "48348275018"));
-        veiculoService.save(new Veiculo(sorento, prata, 2019, "DLX7216", "33359668735"));
-        veiculoService.save(new Veiculo(carnival, prata, 2019, "DZQ9221", "29536880784"));
+        veiculoService.save(new Veiculo(soul, prata, "EDT3016", "17271747328"));
+        veiculoService.save(new Veiculo(cerato, prata, "FRZ7130", "24232339012"));
+        veiculoService.save(new Veiculo(stinger, prata, "DZN1492", "18226874918"));
+        veiculoService.save(new Veiculo(sportage, prata, "ETK6334", "48348275018"));
+        veiculoService.save(new Veiculo(sorento, prata, "DLX7216", "33359668735"));
+        veiculoService.save(new Veiculo(carnival, prata, "DZQ9221", "29536880784"));
 
         //////////////////////////////////////////////////
         // Cliente - Física

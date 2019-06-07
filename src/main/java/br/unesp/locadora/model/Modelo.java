@@ -39,6 +39,11 @@ public class Modelo {
     private Categoria categoria;
 
     /**
+     * Ano do modelo.
+     */
+    private int ano;
+
+    /**
      * Nome do modelo.
      */
     private String nome;
@@ -69,11 +74,13 @@ public class Modelo {
      *
      * @param marca Marca do modelo.
      * @param categoria Categoria do modelo.
+     * @param ano Ano do modelo.
      * @param nome Nome do modelo.
      */
-    public Modelo(Marca marca, Categoria categoria, String nome) {
+    public Modelo(Marca marca, Categoria categoria, int ano, String nome) {
         this.marca = marca;
         this.categoria = categoria;
+        this.ano = ano;
         this.nome = nome;
     }
 
@@ -82,12 +89,14 @@ public class Modelo {
      *
      * @param marca Marca do modelo.
      * @param categoria Categoria do modelo.
+     * @param ano Ano do modelo.
      * @param nome Nome do modelo.
      * @param caracteristicas Características do modelo.
      */
-    public Modelo(Marca marca, Categoria categoria, String nome, List<Caracteristica> caracteristicas) {
+    public Modelo(Marca marca, Categoria categoria, int ano, String nome, List<Caracteristica> caracteristicas) {
         this.marca = marca;
         this.categoria = categoria;
+        this.ano = ano;
         this.nome = nome;
         this.caracteristicas = caracteristicas;
     }
@@ -112,6 +121,14 @@ public class Modelo {
         this.categoria = categoria;
     }
 
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -130,7 +147,7 @@ public class Modelo {
 
     @Override
     public String toString() {
-        return "Modelo{" + "id=" + getId() + ", marca=" + getMarca() + ", categoria=" + getCategoria() + ", nome=" + getNome() + ", caracteristicas=" + getCaracteristicas() + '}';
+        return "Modelo{" + "id=" + getId() + ", marca=" + getMarca() + ", categoria=" + getCategoria() + ", ano=" + getAno() + ", nome=" + getNome() + ", caracteristicas=" + getCaracteristicas() + '}';
     }
 
 }
