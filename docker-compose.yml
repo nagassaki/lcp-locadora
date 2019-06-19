@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql:5.7
+    container_name: locadora_mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password --lower_case_table_names=1
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "locadora"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: locadora_phpmyadmin
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      - PMA_ARBITRARY=1
+  
+  portainer:
+    image: portainer/portainer
+    container_name: locadora_portainer
+    restart: always
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - 81:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
