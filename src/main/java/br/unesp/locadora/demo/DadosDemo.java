@@ -641,11 +641,11 @@ public class DadosDemo {
         fisicaService.save(f4);
         fisicaService.save(f5);
 
-        fisicaService.save(new Fisica("Antônia Fabiana Mendes", "31621790258", "285021291", LocalDate.parse("20/11/1982", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "45987192", "antoniafabianamendes-90@ipek.net.br", new Endereco("13504114", "SP", "Rio Claro", "Vila Operária", "Rua 5", 618)));
-        fisicaService.save(new Fisica("Gabrielly Adriana Isis Cardoso", "11909507237", "483379633", LocalDate.parse("15/05/1962", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "2136152836", "gabriellyadrianaisiscardoso@mega-vale.com", new Endereco("13506839", "SP", "Rio Claro", "Vila Paulista", "Avenida P 41", 928)));
-        fisicaService.save(new Fisica("Sophia Vera Letícia Araújo", "80429800860", "303202786", LocalDate.parse("22/01/1946", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "8937972783", "sophiaveraleticiaaraujo@libbero.com.br", new Endereco("13500460", "SP", "Rio Claro", "Centro", "Avenida 12", 941)));
-        fisicaService.save(new Fisica("Márcia Regina Cardoso", "86231636135", "139630144", LocalDate.parse("01/10/1942", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "7925092133", "marciareginacardoso@pronta.com.br", new Endereco("13503543", "SP", "Rio Claro", "Jardim Paulista", "Avenida 7", 588)));
-        fisicaService.save(new Fisica("Tereza Silvana da Costa", "35040454775", "181534423", LocalDate.parse("27/06/1981", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "7327642310", "terezasilvanadacosta@lphbrasil.com.br", new Endereco("13506755", "SP", "Rio Claro", "Vila Bela Vista", "Rua 18 A", 718)));
+        fisicaService.save(new Fisica("Antônia Fabiana Mendes", "31621790258", "285021291", LocalDate.parse("20/11/1982", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "1938927610", "antoniafabianamendes-90@ipek.net.br", new Endereco("13504114", "SP", "Rio Claro", "Vila Operária", "Rua 5", 618)));
+        fisicaService.save(new Fisica("Gabrielly Adriana Isis Cardoso", "11909507237", "483379633", LocalDate.parse("15/05/1962", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "1925014072", "gabriellyadrianaisiscardoso@mega-vale.com", new Endereco("13506839", "SP", "Rio Claro", "Vila Paulista", "Avenida P 41", 928)));
+        fisicaService.save(new Fisica("Sophia Vera Letícia Araújo", "80429800860", "303202786", LocalDate.parse("22/01/1946", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "1937857266", "sophiaveraleticiaaraujo@libbero.com.br", new Endereco("13500460", "SP", "Rio Claro", "Centro", "Avenida 12", 941)));
+        fisicaService.save(new Fisica("Márcia Regina Cardoso", "86231636135", "139630144", LocalDate.parse("01/10/1942", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "1929838777", "marciareginacardoso@pronta.com.br", new Endereco("13503543", "SP", "Rio Claro", "Jardim Paulista", "Avenida 7", 588)));
+        fisicaService.save(new Fisica("Tereza Silvana da Costa", "35040454775", "181534423", LocalDate.parse("27/06/1981", DateTimeFormatter.ofPattern("dd/MM/yyyy")), "1936075055", "terezasilvanadacosta@lphbrasil.com.br", new Endereco("13506755", "SP", "Rio Claro", "Vila Bela Vista", "Rua 18 A", 718)));
 
         //////////////////////////////////////////////////
         // Cliente - Jurídica
@@ -667,11 +667,11 @@ public class DadosDemo {
         // Pedido
         //////////////////////////////////////////////////
         
-        Pedido p1 = new Pedido(LocalDateTime.now().minusDays(4), v1, f1, LocalDateTime.now().minusDays(3), LocalDateTime.now().minusDays(2), v1.getModelo().getCategoria().getDiaria());
-        Pedido p2 = new Pedido(LocalDateTime.now().minusDays(2), v2, f2, LocalDateTime.now().minusDays(1), LocalDateTime.now(), v2.getModelo().getCategoria().getDiaria());
-        Pedido p3 = new Pedido(LocalDateTime.now().minusDays(2), v3, f3, LocalDateTime.now().minusDays(1), LocalDateTime.now(), v3.getModelo().getCategoria().getDiaria());
-        Pedido p4 = new Pedido(LocalDateTime.now().minusDays(2), v4, f4, LocalDateTime.now().minusDays(1), LocalDateTime.now(), v4.getModelo().getCategoria().getDiaria());
-        Pedido p5 = new Pedido(LocalDateTime.now().minusDays(2), v5, f5, LocalDateTime.now().minusDays(1), LocalDateTime.now(), v5.getModelo().getCategoria().getDiaria());
+        Pedido p1 = new Pedido(LocalDateTime.now().minusDays(4), v1, f1, LocalDateTime.now().minusDays(3), LocalDateTime.now().minusDays(2));
+        Pedido p2 = new Pedido(LocalDateTime.now().minusDays(2), v2, f2, LocalDateTime.now().minusDays(1), LocalDateTime.now());
+        Pedido p3 = new Pedido(LocalDateTime.now().minusDays(2), v3, f3, LocalDateTime.now().minusDays(1), LocalDateTime.now());
+        Pedido p4 = new Pedido(LocalDateTime.now().minusDays(2), v4, f4, LocalDateTime.now().minusDays(1), LocalDateTime.now());
+        Pedido p5 = new Pedido(LocalDateTime.now().minusDays(2), v5, f5, LocalDateTime.now().minusDays(1), LocalDateTime.now());
 
         Fatura ft1 = p1.finalizar();
         Fatura ft2 = p2.finalizar();
@@ -685,11 +685,11 @@ public class DadosDemo {
         pedidoService.save(p4);
         pedidoService.save(p5);
 
-        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v1, j1, LocalDateTime.now(), LocalDateTime.now().plusDays(1), v1.getModelo().getCategoria().getDiaria()));
-        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v2, j2, LocalDateTime.now(), LocalDateTime.now().plusDays(1), v2.getModelo().getCategoria().getDiaria()));
-        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v3, j3, LocalDateTime.now(), LocalDateTime.now().plusDays(1), v3.getModelo().getCategoria().getDiaria()));
-        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v4, j4, LocalDateTime.now(), LocalDateTime.now().plusDays(1), v4.getModelo().getCategoria().getDiaria()));
-        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v5, j5, LocalDateTime.now(), LocalDateTime.now().plusDays(1), v5.getModelo().getCategoria().getDiaria()));
+        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v1, j1, LocalDateTime.now(), LocalDateTime.now().plusDays(1)));
+        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v2, j2, LocalDateTime.now(), LocalDateTime.now().plusDays(1)));
+        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v3, j3, LocalDateTime.now(), LocalDateTime.now().plusDays(1)));
+        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v4, j4, LocalDateTime.now(), LocalDateTime.now().plusDays(1)));
+        pedidoService.save(new Pedido(LocalDateTime.now().minusDays(1), v5, j5, LocalDateTime.now(), LocalDateTime.now().plusDays(1)));
 
         //////////////////////////////////////////////////
         // Fatura
