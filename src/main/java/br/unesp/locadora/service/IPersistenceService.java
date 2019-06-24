@@ -48,6 +48,7 @@ public abstract class IPersistenceService<T> {
             getEntityTransaction().commit();
         } catch (HibernateException ex) {
             getEntityTransaction().rollback();
+            throw ex;
         }
     }
 
@@ -63,6 +64,7 @@ public abstract class IPersistenceService<T> {
             getEntityTransaction().commit();
         } catch (HibernateException ex) {
             getEntityTransaction().rollback();
+            throw ex;
         }
     }
 
@@ -79,7 +81,7 @@ public abstract class IPersistenceService<T> {
         try {
             object = getEntityManager().getReference(type, id);
         } catch (Exception ex) {
-
+            throw ex;
         }
 
         return object;
