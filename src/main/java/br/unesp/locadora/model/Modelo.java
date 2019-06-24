@@ -78,10 +78,10 @@ public class Modelo {
      * @param nome Nome do modelo.
      */
     public Modelo(Marca marca, Categoria categoria, int ano, String nome) {
-        this.marca = marca;
-        this.categoria = categoria;
-        this.ano = ano;
-        this.nome = nome;
+        setMarca(marca);
+        setCategoria(categoria);
+        setAno(ano);
+        setNome(nome);
     }
 
     /**
@@ -94,10 +94,12 @@ public class Modelo {
      * @param caracteristicas Características do modelo.
      */
     public Modelo(Marca marca, Categoria categoria, int ano, String nome, List<Caracteristica> caracteristicas) {
-        this.marca = marca;
-        this.categoria = categoria;
-        this.ano = ano;
-        this.nome = nome;
+
+        setMarca(marca);
+        setCategoria(categoria);
+        setAno(ano);
+        setNome(nome);
+
         this.caracteristicas = caracteristicas;
     }
 
@@ -109,7 +111,12 @@ public class Modelo {
         return marca;
     }
 
-    public void setMarca(Marca marca) {
+    public final void setMarca(Marca marca) {
+
+        if (marca == null) {
+            throw new IllegalArgumentException("Informe a marca do modelo.");
+        }
+
         this.marca = marca;
     }
 
@@ -117,7 +124,12 @@ public class Modelo {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public final void setCategoria(Categoria categoria) {
+
+        if (categoria == null) {
+            throw new IllegalArgumentException("Informe a categoria do modelo.");
+        }
+
         this.categoria = categoria;
     }
 
@@ -125,7 +137,12 @@ public class Modelo {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public final void setAno(int ano) {
+
+        if (ano < 0) {
+            throw new IllegalArgumentException("Informe uma ano válido.");
+        }
+
         this.ano = ano;
     }
 
@@ -133,7 +150,12 @@ public class Modelo {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
+
+        if (nome.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o nome do modelo.");
+        }
+
         this.nome = nome;
     }
 

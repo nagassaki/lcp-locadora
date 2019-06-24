@@ -1,5 +1,6 @@
 package br.unesp.locadora.model;
 
+import br.unesp.locadora.util.Validar;
 import java.time.LocalDate;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -45,8 +46,11 @@ public class Fisica extends Cliente {
      * @param endereco Endereço do cliente.
      */
     public Fisica(String nome, String cpf, String rg, LocalDate dataNascimento, String telefone, String email, Endereco endereco) {
+
         super(nome, telefone, email, endereco);
-        this.cpf = cpf;
+
+        setCpf(cpf);
+
         this.rg = rg;
         this.dataNascimento = dataNascimento;
     }
@@ -55,7 +59,16 @@ public class Fisica extends Cliente {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public final void setCpf(String cpf) {
+
+        if (cpf.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o CPF do cliente.");
+        }
+
+        if (!Validar.cpf(cpf.trim())) {
+            throw new IllegalArgumentException("Informe um número de CPF válido.");
+        }
+
         this.cpf = cpf;
     }
 

@@ -1,5 +1,6 @@
 package br.unesp.locadora.model;
 
+import br.unesp.locadora.util.Validar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +10,7 @@ import javax.persistence.Id;
  * Endereço de um cliente.
  */
 @Entity
-public class Endereco {
+public final class Endereco {
 
     /**
      * Identificador do endereço.
@@ -71,12 +72,14 @@ public class Endereco {
      * @param numero Número do endereço.
      */
     public Endereco(String cep, String estado, String cidade, String bairro, String endereco, int numero) {
-        this.cep = cep;
+
+        setCep(cep);
+        setNumero(numero);
+
         this.estado = estado;
         this.cidade = cidade;
         this.bairro = bairro;
         this.endereco = endereco;
-        this.numero = numero;
     }
 
     /**
@@ -91,12 +94,14 @@ public class Endereco {
      * @param complemento Complemento do endereço.
      */
     public Endereco(String cep, String estado, String cidade, String bairro, String endereco, int numero, String complemento) {
-        this.cep = cep;
+
+        setCep(cep);
+        setNumero(numero);
+
         this.estado = estado;
         this.cidade = cidade;
         this.bairro = bairro;
         this.endereco = endereco;
-        this.numero = numero;
         this.complemento = complemento;
     }
 
@@ -108,7 +113,12 @@ public class Endereco {
         return cep;
     }
 
-    public void setCep(String cep) {
+    public final void setCep(String cep) {
+
+        if (!cep.trim().equals("") && !Validar.cep(cep.trim())) {
+            throw new IllegalArgumentException("Informe um número de CEP válido.");
+        }
+
         this.cep = cep;
     }
 
@@ -149,6 +159,11 @@ public class Endereco {
     }
 
     public void setNumero(int numero) {
+
+        if (numero < 0) {
+            throw new IllegalArgumentException("Informe um número válido.");
+        }
+
         this.numero = numero;
     }
 

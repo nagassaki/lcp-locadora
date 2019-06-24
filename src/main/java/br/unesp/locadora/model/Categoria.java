@@ -49,9 +49,9 @@ public class Categoria {
      * @param multa Valor de multa diária da categoria.
      */
     public Categoria(String nome, BigDecimal diaria, BigDecimal multa) {
-        this.nome = nome;
-        this.diaria = diaria;
-        this.multa = multa;
+        setNome(nome);
+        setDiaria(diaria);
+        setMulta(multa);
     }
 
     public int getId() {
@@ -62,7 +62,12 @@ public class Categoria {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
+
+        if (nome.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o nome da categoria.");
+        }
+
         this.nome = nome;
     }
 
@@ -70,7 +75,16 @@ public class Categoria {
         return diaria;
     }
 
-    public void setDiaria(BigDecimal diaria) {
+    public final void setDiaria(BigDecimal diaria) {
+
+        if (diaria == null) {
+            throw new IllegalArgumentException("Informe a diária da categoria.");
+        }
+
+        if (diaria.signum() == -1) {
+            throw new IllegalArgumentException("O valor da diária não pode ser negativo.");
+        }
+
         this.diaria = diaria;
     }
 
@@ -78,7 +92,16 @@ public class Categoria {
         return multa;
     }
 
-    public void setMulta(BigDecimal multa) {
+    public final void setMulta(BigDecimal multa) {
+
+        if (multa == null) {
+            throw new IllegalArgumentException("Informe a multa da categoria.");
+        }
+
+        if (multa.signum() == -1) {
+            throw new IllegalArgumentException("O valor da multa não pode ser negativo.");
+        }
+
         this.multa = multa;
     }
 

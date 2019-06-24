@@ -36,7 +36,7 @@ public class Marca {
      * @param nome Nome da marca.
      */
     public Marca(String nome) {
-        this.nome = nome;
+        setNome(nome);
     }
 
     public int getId() {
@@ -47,7 +47,12 @@ public class Marca {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
+
+        if (nome.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o nome da marca.");
+        }
+
         this.nome = nome;
     }
 

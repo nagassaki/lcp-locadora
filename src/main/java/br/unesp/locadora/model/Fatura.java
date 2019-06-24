@@ -1,6 +1,7 @@
 package br.unesp.locadora.model;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,9 +36,19 @@ public class Fatura {
     private Pedido pedido;
 
     /**
-     * Valor da fatura.
+     * Valor do pedido.
      */
     private BigDecimal valor;
+
+    /**
+     * Valor da multa.
+     */
+    private BigDecimal multa;
+
+    /**
+     * Valor da fatura.
+     */
+    private BigDecimal total;
 
     /**
      * Construtor.
@@ -51,12 +62,73 @@ public class Fatura {
      *
      * @param data Data da fatura.
      * @param pedido Pedido da fatura.
-     * @param valor Valor da fatura.
+     * @param valor Valor do pedido.
      */
     public Fatura(LocalDateTime data, Pedido pedido, BigDecimal valor) {
-        this.data = data;
-        this.pedido = pedido;
+
+        setData(data);
+        setPedido(pedido);
+
+        if (valor == null) {
+            throw new IllegalArgumentException("Informe o valor da fatura.");
+        }
+
+        if (valor.signum() == -1) {
+            throw new IllegalArgumentException("O valor não pode ser negativo.");
+        }
+
         this.valor = valor;
+        multa = BigDecimal.ZERO;
+        total = valor;
+    }
+
+    /**
+     * Construtor.
+     *
+     * @param data Data da fatura.
+     * @param pedido Pedido da fatura.
+     * @param valor Valor do pedido.
+     * @param multa Valor da multa.
+     */
+    public Fatura(LocalDateTime data, Pedido pedido, BigDecimal valor, BigDecimal multa) {
+
+        setData(data);
+        setPedido(pedido);
+
+        if (valor == null) {
+            throw new IllegalArgumentException("Informe o valor da fatura.");
+        }
+
+        if (valor.signum() == -1) {
+            throw new IllegalArgumentException("O valor não pode ser negativo.");
+        }
+
+        if (multa == null) {
+            throw new IllegalArgumentException("Informe a multa da fatura.");
+        }
+
+        if (multa.signum() == -1) {
+            throw new IllegalArgumentException("A multa não pode ser negativo.");
+        }
+
+        this.valor = valor;
+        this.multa = multa;
+        total = valor.add(multa);
+    }
+
+    public void calcular() {
+
+        LocalDateTime hoje = LocalDateTime.now();
+        valor = pedido.getValor();
+
+        if (hoje.isAfter(pedido.getDevolucao())) {
+            long dias = Duration.between(pedido.getDevolucao(), hoje).toDays();
+            multa = pedido.getVeiculo().getModelo().getCategoria().getMulta().multiply(new BigDecimal(dias));
+        } else {
+            multa = BigDecimal.ZERO;
+        }
+
+        total = valor.add(multa);
     }
 
     public int getId() {
@@ -67,7 +139,12 @@ public class Fatura {
         return data;
     }
 
-    public void setData(LocalDateTime data) {
+    public final void setData(LocalDateTime data) {
+
+        if (data == null) {
+            throw new IllegalArgumentException("Informe a data da fatura.");
+        }
+
         this.data = data;
     }
 
@@ -75,7 +152,12 @@ public class Fatura {
         return pedido;
     }
 
-    public void setPedido(Pedido pedido) {
+    public final void setPedido(Pedido pedido) {
+
+        if (pedido == null) {
+            throw new IllegalArgumentException("Informe o pedido da fatura.");
+        }
+
         this.pedido = pedido;
     }
 
@@ -83,13 +165,17 @@ public class Fatura {
         return valor;
     }
 
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
+    public BigDecimal getMulta() {
+        return multa;
+    }
+
+    public BigDecimal getTotal() {
+        return total;
     }
 
     @Override
     public String toString() {
-        return "Fatura{" + "id=" + getId() + ", data=" + getData() + ", pedido=" + getPedido() + ", valor=" + getValor() + '}';
+        return "Fatura{" + "id=" + getId() + ", data=" + getData() + ", pedido=" + getPedido() + ", valor=" + getValor() + ", multa=" + getMulta() + ", total=" + getTotal() + '}';
     }
 
 }

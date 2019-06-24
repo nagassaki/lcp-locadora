@@ -1,5 +1,6 @@
 package br.unesp.locadora.model;
 
+import br.unesp.locadora.util.Validar;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
@@ -44,7 +45,12 @@ public class Juridica extends Cliente {
      * @param endereco Endereço do cliente.
      */
     public Juridica(String nome, String razaoSocial, String cnpj, String inscricaoEstadual, String telefone, String email, Endereco endereco) {
+
         super(nome, telefone, email, endereco);
+
+        setRazaoSocial(razaoSocial);
+        setCnpj(cnpj);
+
         this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
         this.inscricaoEstadual = inscricaoEstadual;
@@ -54,7 +60,12 @@ public class Juridica extends Cliente {
         return razaoSocial;
     }
 
-    public void setRazaoSocial(String razaoSocial) {
+    public final void setRazaoSocial(String razaoSocial) {
+
+        if (razaoSocial.trim().equals("")) {
+            throw new IllegalArgumentException("Informe a razão social do cliente.");
+        }
+
         this.razaoSocial = razaoSocial;
     }
 
@@ -62,7 +73,16 @@ public class Juridica extends Cliente {
         return cnpj;
     }
 
-    public void setCnpj(String cnpj) {
+    public final void setCnpj(String cnpj) {
+
+        if (cnpj.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o CNPJ do cliente.");
+        }
+
+        if (!Validar.cnpj(cnpj.trim())) {
+            throw new IllegalArgumentException("Informe um número de CNPJ válido.");
+        }
+
         this.cnpj = cnpj;
     }
 

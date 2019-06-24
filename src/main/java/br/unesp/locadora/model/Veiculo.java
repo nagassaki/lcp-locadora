@@ -1,5 +1,6 @@
 package br.unesp.locadora.model;
 
+import br.unesp.locadora.util.Validar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -60,10 +61,10 @@ public class Veiculo {
      * @param renavam RENAVAM do veículo.
      */
     public Veiculo(Modelo modelo, Cor cor, String placa, String renavam) {
-        this.modelo = modelo;
-        this.cor = cor;
-        this.placa = placa;
-        this.renavam = renavam;
+        setModelo(modelo);
+        setCor(cor);
+        setPlaca(placa);
+        setRenavam(renavam);
     }
 
     public int getId() {
@@ -74,7 +75,12 @@ public class Veiculo {
         return modelo;
     }
 
-    public void setModelo(Modelo modelo) {
+    public final void setModelo(Modelo modelo) {
+
+        if (modelo == null) {
+            throw new IllegalArgumentException("Informe o modelo do veículo.");
+        }
+
         this.modelo = modelo;
     }
 
@@ -82,7 +88,12 @@ public class Veiculo {
         return cor;
     }
 
-    public void setCor(Cor cor) {
+    public final void setCor(Cor cor) {
+
+        if (cor == null) {
+            throw new IllegalArgumentException("Informe a cor do veículo.");
+        }
+
         this.cor = cor;
     }
 
@@ -90,15 +101,33 @@ public class Veiculo {
         return placa;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public final void setPlaca(String placa) {
+
+        if (placa.trim().equals("")) {
+            throw new IllegalArgumentException("Informe a placa do veículo.");
+        }
+
+        if (!Validar.placa(placa.trim())) {
+            throw new IllegalArgumentException("Informe uma placa válida.");
+        }
+
+        this.placa = placa.toUpperCase();
     }
 
     public String getRenavam() {
         return renavam;
     }
 
-    public void setRenavam(String renavam) {
+    public final void setRenavam(String renavam) {
+
+        if (renavam.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o RENAVAM do veículo.");
+        }
+
+        if (!Validar.renavam(renavam.trim())) {
+            throw new IllegalArgumentException("Informe um RENAVAM válido.");
+        }
+
         this.renavam = renavam;
     }
 

@@ -36,7 +36,7 @@ public class Cor {
      * @param nome Nome da cor.
      */
     public Cor(String nome) {
-        this.nome = nome;
+        setNome(nome);
     }
 
     public int getId() {
@@ -47,7 +47,12 @@ public class Cor {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
+
+        if (nome.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o nome da cor.");
+        }
+
         this.nome = nome;
     }
 

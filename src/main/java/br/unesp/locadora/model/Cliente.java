@@ -1,5 +1,6 @@
 package br.unesp.locadora.model;
 
+import br.unesp.locadora.util.Validar;
 import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
@@ -65,9 +66,11 @@ public abstract class Cliente {
      * @param endereco Endereço do cliente.
      */
     public Cliente(String nome, String telefone, String email, Endereco endereco) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
+
+        setNome(nome);
+        setTelefone(telefone);
+        setEmail(email);
+
         this.endereco = endereco;
     }
 
@@ -79,7 +82,12 @@ public abstract class Cliente {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public final void setNome(String nome) {
+
+        if (nome.trim().equals("")) {
+            throw new IllegalArgumentException("Informe o nome/razão social do cliente.");
+        }
+
         this.nome = nome;
     }
 
@@ -87,7 +95,12 @@ public abstract class Cliente {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public final void setTelefone(String telefone) {
+
+        if (!telefone.trim().equals("") && !Validar.telefone(telefone.trim())) {
+            throw new IllegalArgumentException("Informe um número de telefone válido.");
+        }
+
         this.telefone = telefone;
     }
 
@@ -95,7 +108,12 @@ public abstract class Cliente {
         return email;
     }
 
-    public void setEmail(String email) {
+    public final void setEmail(String email) {
+
+        if (!email.trim().equals("") && !Validar.email(email.trim())) {
+            throw new IllegalArgumentException("Informe um endereço de e-mail válido.");
+        }
+
         this.email = email;
     }
 
