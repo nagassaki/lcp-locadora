@@ -34,7 +34,10 @@ docker-compose up
 ### NetBeans
 
 Arquivo > Abrir Projeto  
-Selecione o diretório do projeto.
+Selecione o diretório do projeto.  
+
+Arquivo > Propriedades do Projeto > Executar  
+Digite **_br.unesp.locadora.gui.EZManagerForm_** na propriedade _Classe Principal_.
 
 ### Conjunto de Dados de Teste
 
