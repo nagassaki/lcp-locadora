@@ -28,7 +28,7 @@ Digite a seguinte sequência de comandos:
 
 ```
 docker-machine start default
-docker-compose up
+docker-compose up -d
 ```
 
 ### NetBeans
