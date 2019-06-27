@@ -71,7 +71,7 @@ public class Pedido {
      * Construtor.
      */
     public Pedido() {
-
+        
     }
 
     /**
@@ -124,15 +124,15 @@ public class Pedido {
      * @return Fatura do pedido.
      */
     public Fatura finalizar() {
-
-        finalizado = true;
-
+        
+        setFinalizado(true);
+        
         Fatura fatura = new Fatura();
-
+        
         fatura.setData(LocalDateTime.now());
         fatura.setPedido(this);
         fatura.calcular();
-
+        
         return fatura;
     }
 
@@ -140,110 +140,118 @@ public class Pedido {
      * Marca pedido como cancelado.
      */
     public void cancelar() {
-        cancelado = true;
+        setCancelado(true);
     }
-
+    
     public int getId() {
         return id;
     }
-
+    
     public LocalDateTime getData() {
         return data;
     }
-
+    
     public final void setData(LocalDateTime data) {
-
+        
         if (data == null) {
             throw new IllegalArgumentException("Informe a data do pedido.");
         }
-
+        
         this.data = data;
     }
-
+    
     public Veiculo getVeiculo() {
         return veiculo;
     }
-
+    
     public final void setVeiculo(Veiculo veiculo) {
-
+        
         if (veiculo == null) {
             throw new IllegalArgumentException("Informe o veículo do pedido.");
         }
-
+        
         this.veiculo = veiculo;
     }
-
+    
     public Cliente getCliente() {
         return cliente;
     }
-
+    
     public final void setCliente(Cliente cliente) {
-
+        
         if (cliente == null) {
             throw new IllegalArgumentException("Informe o cliente do pedido.");
         }
-
+        
         this.cliente = cliente;
     }
-
+    
     public LocalDateTime getRetirada() {
         return retirada;
     }
-
+    
     public final void setRetirada(LocalDateTime retirada) {
-
+        
         if (retirada == null) {
             throw new IllegalArgumentException("Informe a data de retirada do pedido.");
         }
-
+        
         this.retirada = retirada;
     }
-
+    
     public LocalDateTime getDevolucao() {
         return devolucao;
     }
-
+    
     public final void setDevolucao(LocalDateTime devolucao) {
-
+        
         if (devolucao == null) {
             throw new IllegalArgumentException("Informe a data de devolução do pedido.");
         }
-
+        
         if (devolucao.isBefore(retirada)) {
             throw new IllegalArgumentException("A data de devolução deve ser posterior a data de retirada.");
         }
-
+        
         this.devolucao = devolucao;
     }
-
+    
     public BigDecimal getValor() {
         return valor;
     }
-
+    
     public final void setValor(BigDecimal valor) {
-
+        
         if (valor == null) {
             throw new IllegalArgumentException("Informe o valor do pedido.");
         }
-
+        
         if (valor.signum() == -1) {
             throw new IllegalArgumentException("O valor não pode ser negativo.");
         }
-
+        
         this.valor = valor;
     }
-
+    
+    public void setFinalizado(boolean finalizado) {
+        this.finalizado = finalizado;
+    }
+    
     public boolean isFinalizado() {
         return finalizado;
     }
-
+    
+    public void setCancelado(boolean cancelado) {
+        this.cancelado = cancelado;
+    }
+    
     public boolean isCancelado() {
         return cancelado;
     }
-
+    
     @Override
     public String toString() {
         return "Pedido{" + "id=" + getId() + ", data=" + getData() + ", veiculo=" + getVeiculo() + ", cliente=" + getCliente() + ", retirada=" + getRetirada() + ", devolucao=" + getDevolucao() + ", valor=" + getValor() + ", finalizado=" + isFinalizado() + ", cancelado=" + isCancelado() + '}';
     }
-
+    
 }

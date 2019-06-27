@@ -186,16 +186,18 @@ public class EditarPedidoForm extends javax.swing.JFrame {
 
     private void btnAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarActionPerformed
         try {
-
+            
             Pedido pedido = pedidoService.getById(id);
-
+            
             pedido.setData(LocalDateTime.now());
             pedido.setRetirada(txtRetirada.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
             pedido.setDevolucao(txtDevolucao.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime());
+            pedido.setFinalizado(false);
+            pedido.setCancelado(false);
             pedido.calcular();
-
+            
             pedidoService.save(pedido);
-
+            
             JOptionPane.showMessageDialog(this, "Pedido atualizado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage(), "Aviso", JOptionPane.WARNING_MESSAGE);
@@ -213,15 +215,15 @@ public class EditarPedidoForm extends javax.swing.JFrame {
      * Preenche formulário.
      */
     private void preencherFormulario() {
-
+        
         Pedido pedido = pedidoService.getById(id);
-
+        
         txtVeiculo.setText(String.format("%s - %s, %s", pedido.getVeiculo().getPlaca(), pedido.getVeiculo().getModelo().getNome(), pedido.getVeiculo().getModelo().getMarca().getNome()));
         txtCliente.setText(pedido.getCliente().getNome());
         txtRetirada.setDate(new Date().from(pedido.getRetirada().atZone(ZoneId.systemDefault()).toInstant()));
         txtDevolucao.setDate(new Date().from(pedido.getDevolucao().atZone(ZoneId.systemDefault()).toInstant()));
     }
-
+    
     public void setId(int id) {
         if (id > 0) {
             this.id = id;
