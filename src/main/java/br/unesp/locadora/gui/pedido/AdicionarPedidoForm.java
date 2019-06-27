@@ -292,8 +292,10 @@ public class AdicionarPedidoForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Pedido adicionado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         } catch (IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage(), "Aviso", JOptionPane.WARNING_MESSAGE);
+        } catch (NullPointerException ex) {
+            JOptionPane.showMessageDialog(this, "Informe uma data.", "Aviso", JOptionPane.WARNING_MESSAGE);
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, ex.getClass().getName(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
