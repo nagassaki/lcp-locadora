@@ -95,6 +95,7 @@ public class FaturasForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabela.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tabela.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabelaMouseClicked(evt);

@@ -124,6 +124,7 @@ public class ClientesForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblFisica.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblFisica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblFisicaMouseClicked(evt);
@@ -224,6 +225,7 @@ public class ClientesForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblJuridica.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblJuridica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblJuridicaMouseClicked(evt);

@@ -120,6 +120,7 @@ public class PedidosForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblAtivos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblAtivos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblAtivosMouseClicked(evt);
@@ -226,6 +227,7 @@ public class PedidosForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblFinalizados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblFinalizados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblFinalizadosMouseClicked(evt);
@@ -305,6 +307,7 @@ public class PedidosForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblCancelados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblCancelados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblCanceladosMouseClicked(evt);

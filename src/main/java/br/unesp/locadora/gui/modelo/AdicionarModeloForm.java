@@ -195,6 +195,7 @@ public class AdicionarModeloForm extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblCaracteristicas.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tblCaracteristicas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblCaracteristicasMouseClicked(evt);
