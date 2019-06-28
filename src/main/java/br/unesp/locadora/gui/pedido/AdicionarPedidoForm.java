@@ -46,6 +46,7 @@ public class AdicionarPedidoForm extends javax.swing.JFrame {
      * Creates new form AdicionarPedidoForm
      */
     public AdicionarPedidoForm() {
+        
         initComponents();
         carregarFormulario();
     }
@@ -124,7 +125,19 @@ public class AdicionarPedidoForm extends javax.swing.JFrame {
 
         lblRetirada.setText("Data de Retirada:");
 
+        txtRetirada.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                txtRetiradaPropertyChange(evt);
+            }
+        });
+
         lblDevolucao.setText("Data de Devolução:");
+
+        txtDevolucao.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                txtDevolucaoPropertyChange(evt);
+            }
+        });
 
         javax.swing.GroupLayout painel2Layout = new javax.swing.GroupLayout(painel2);
         painel2.setLayout(painel2Layout);
@@ -304,11 +317,23 @@ public class AdicionarPedidoForm extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void txtRetiradaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtRetiradaPropertyChange
+        if (evt.getPropertyName().equals("date")) {
+            atualizarVeiculos();
+        }
+    }//GEN-LAST:event_txtRetiradaPropertyChange
+
+    private void txtDevolucaoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txtDevolucaoPropertyChange
+        if (evt.getPropertyName().equals("date")) {
+            atualizarVeiculos();
+        }
+    }//GEN-LAST:event_txtDevolucaoPropertyChange
+
     /**
      * Atualiza lista de veículos.
      */
     private void atualizarVeiculos() {
-        JComboBoxUtil.fillVeiculos(cbxVeiculo, veiculoService.list());
+        JComboBoxUtil.fillVeiculos(cbxVeiculo, veiculoService.listDisponiveis());
     }
 
     /**

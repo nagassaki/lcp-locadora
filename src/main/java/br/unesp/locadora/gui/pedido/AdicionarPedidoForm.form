@@ -208,6 +208,9 @@
               </Properties>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="txtRetirada">
+              <Events>
+                <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="txtRetiradaPropertyChange"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.toedter.calendar.JDateChooser(&quot;dd/MM/yyyy&quot;, &quot;##/##/####&quot;, &apos;_&apos;)"/>
               </AuxValues>
@@ -218,6 +221,9 @@
               </Properties>
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="txtDevolucao">
+              <Events>
+                <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="txtDevolucaoPropertyChange"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.toedter.calendar.JDateChooser(&quot;dd/MM/yyyy&quot;, &quot;##/##/####&quot;, &apos;_&apos;)"/>
               </AuxValues>

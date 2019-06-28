@@ -220,7 +220,7 @@ public class EditarPedidoForm extends javax.swing.JFrame {
 
         Pedido pedido = pedidoService.getById(id);
 
-        txtVeiculo.setText(String.format("%s - %s, %s", pedido.getVeiculo().getPlaca(), pedido.getVeiculo().getModelo().getNome(), pedido.getVeiculo().getModelo().getMarca().getNome()));
+        txtVeiculo.setText(String.format("%s - %s %d, %s", pedido.getVeiculo().getPlaca(), pedido.getVeiculo().getModelo().getNome(), pedido.getVeiculo().getModelo().getAno(), pedido.getVeiculo().getModelo().getMarca().getNome()));
         txtCliente.setText(pedido.getCliente().getNome());
         txtRetirada.setDate(new Date().from(pedido.getRetirada().atZone(ZoneId.systemDefault()).toInstant()));
         txtDevolucao.setDate(new Date().from(pedido.getDevolucao().atZone(ZoneId.systemDefault()).toInstant()));
