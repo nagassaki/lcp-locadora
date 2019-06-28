@@ -22,7 +22,7 @@ public class VeiculoListCellRenderer implements ListCellRenderer {
         if (e != null) {
             if (e instanceof Veiculo) {
                 Veiculo veiculo = (Veiculo) e;
-                jLabel.setText(String.format("%s - %s, %s", veiculo.getPlaca(), veiculo.getModelo().getNome(), veiculo.getModelo().getMarca().getNome()));
+                jLabel.setText(String.format("%s - %s %d, %s", veiculo.getPlaca(), veiculo.getModelo().getNome(), veiculo.getModelo().getAno(), veiculo.getModelo().getMarca().getNome()));
             } else {
                 jLabel.setText(e.toString());
             }

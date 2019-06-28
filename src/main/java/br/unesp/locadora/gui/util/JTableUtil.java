@@ -245,7 +245,7 @@ public class JTableUtil {
         for (Veiculo veiculo : veiculos) {
             model.addRow(new Object[]{
                 veiculo.getId(),
-                veiculo.getModelo().getNome(),
+                String.format("%s %d", veiculo.getModelo().getNome(), veiculo.getModelo().getAno()),
                 veiculo.getCor().getNome(),
                 veiculo.getPlaca(),
                 veiculo.getRenavam()
