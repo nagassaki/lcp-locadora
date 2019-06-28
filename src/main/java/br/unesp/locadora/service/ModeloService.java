@@ -33,7 +33,7 @@ public class ModeloService extends IPersistenceService<Modelo> {
         List<Modelo> resultado = new ArrayList<>();
 
         try {
-            Query query = getEntityManager().createQuery("select m from Modelo m order by m.nome");
+            Query query = getEntityManager().createQuery("select m from Modelo m order by m.marca.nome, m.ano, m.nome");
             resultado = query.getResultList();
         } catch (Exception ex) {
 
@@ -59,27 +59,27 @@ public class ModeloService extends IPersistenceService<Modelo> {
 
             switch (column) {
                 case NOME:
-                    query = getEntityManager().createQuery("select m from Modelo m where m.nome like concat('%', :nome, '%') order by m.nome");
+                    query = getEntityManager().createQuery("select m from Modelo m where m.nome like concat('%', :nome, '%') order by m.marca.nome, m.ano, m.nome");
                     query.setParameter("nome", value);
                     break;
                 case MARCA:
-                    query = getEntityManager().createQuery("select m from Modelo m where m.marca.nome like concat('%', :marca, '%') order by m.nome");
+                    query = getEntityManager().createQuery("select m from Modelo m where m.marca.nome like concat('%', :marca, '%') order by m.marca.nome, m.ano, m.nome");
                     query.setParameter("marca", value);
                     break;
                 case ANO:
-                    query = getEntityManager().createQuery("select m from Modelo m where m.ano like concat('%', :ano, '%') order by m.nome");
+                    query = getEntityManager().createQuery("select m from Modelo m where m.ano like concat('%', :ano, '%') order by m.marca.nome, m.ano, m.nome");
                     query.setParameter("ano", value);
                     break;
                 case CATEGORIA:
-                    query = getEntityManager().createQuery("select m from Modelo m where m.categoria.nome like concat('%', :categoria, '%') order by m.nome");
+                    query = getEntityManager().createQuery("select m from Modelo m where m.categoria.nome like concat('%', :categoria, '%') order by m.marca.nome, m.ano, m.nome");
                     query.setParameter("categoria", value);
                     break;
                 case CARACTERISTICAS:
-                    query = getEntityManager().createQuery("select m from Modelo m join m.caracteristicas c where c.nome like concat('%', :caracteristica, '%') order by m.nome");
+                    query = getEntityManager().createQuery("select m from Modelo m join m.caracteristicas c where c.nome like concat('%', :caracteristica, '%') order by m.marca.nome, m.ano, m.nome");
                     query.setParameter("caracteristica", value);
                     break;
                 default:
-                    query = getEntityManager().createQuery("select m from Modelo m order by m.nome");
+                    query = getEntityManager().createQuery("select m from Modelo m order by m.marca.nome, m.ano, m.nome");
             }
 
             resultado = query.getResultList();

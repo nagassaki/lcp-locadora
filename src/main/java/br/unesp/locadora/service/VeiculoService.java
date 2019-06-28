@@ -32,7 +32,7 @@ public class VeiculoService extends IPersistenceService<Veiculo> {
         List<Veiculo> resultado = new ArrayList<>();
 
         try {
-            Query query = getEntityManager().createQuery("select v from Veiculo v order by v.placa");
+            Query query = getEntityManager().createQuery("select v from Veiculo v order by v.modelo.marca.nome, v.modelo.ano, v.placa");
             resultado = query.getResultList();
         } catch (Exception ex) {
 
@@ -58,25 +58,44 @@ public class VeiculoService extends IPersistenceService<Veiculo> {
 
             switch (column) {
                 case MODELO:
-                    query = getEntityManager().createQuery("select v from Veiculo v where v.modelo.nome like concat('%', :modelo, '%') order by v.placa");
+                    query = getEntityManager().createQuery("select v from Veiculo v where v.modelo.nome like concat('%', :modelo, '%') or v.modelo.ano like concat('%', :modelo, '%') order by v.modelo.marca.nome, v.modelo.ano, v.placa");
                     query.setParameter("modelo", value);
                     break;
                 case COR:
-                    query = getEntityManager().createQuery("select v from Veiculo v where v.cor.nome like concat('%', :cor, '%') order by v.placa");
+                    query = getEntityManager().createQuery("select v from Veiculo v where v.cor.nome like concat('%', :cor, '%') order by v.modelo.marca.nome, v.modelo.ano, v.placa");
                     query.setParameter("cor", value);
                     break;
                 case PLACA:
-                    query = getEntityManager().createQuery("select v from Veiculo v where v.placa like concat('%', :placa, '%') order by v.placa");
+                    query = getEntityManager().createQuery("select v from Veiculo v where v.placa like concat('%', :placa, '%') order by v.modelo.marca.nome, v.modelo.ano, v.placa");
                     query.setParameter("placa", value);
                     break;
                 case RENAVAM:
-                    query = getEntityManager().createQuery("select v from Veiculo v where v.renavam like concat('%', :renavam, '%') order by v.placa");
+                    query = getEntityManager().createQuery("select v from Veiculo v where v.renavam like concat('%', :renavam, '%') order by v.modelo.marca.nome, v.modelo.ano, v.placa");
                     query.setParameter("renavam", value);
                     break;
                 default:
-                    query = getEntityManager().createQuery("select v from Veiculo v order by v.placa");
+                    query = getEntityManager().createQuery("select v from Veiculo v order by v.modelo.marca.nome, v.modelo.ano, v.placa");
             }
 
+            resultado = query.getResultList();
+        } catch (Exception ex) {
+
+        }
+
+        return resultado;
+    }
+    
+    /**
+     * Retorna lista de veículos disponíveis.
+     *
+     * @return Lista de veículos disponíveis.
+     */
+    public List<Veiculo> listDisponiveis() {
+
+        List<Veiculo> resultado = new ArrayList<>();
+
+        try {
+            Query query = getEntityManager().createQuery("select v from Pedido p right join Veiculo v on (p.veiculo = v.id and p.finalizado = false and p.cancelado = false) where p.id is null group by v.id order by v.modelo.marca.nome, v.modelo.ano, v.placa");
             resultado = query.getResultList();
         } catch (Exception ex) {
 
